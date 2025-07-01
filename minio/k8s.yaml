@@ -103,7 +103,7 @@ spec:
       volumes:
       - name: minio-storage # This name should match the volumeMounts.name above
         hostPath:
-          path: /mnt/minio-data # Path on the node
+          path: /mnt/sta-minio-data # Path on the node
           type: DirectoryOrCreate # Ensures directory exists or is created
 ---
 apiVersion: v1
