@@ -29,14 +29,4 @@ export default async function meRoutes(fastify, opts) {
     reply.send({ user: sanitizeUser(user) });
   });
 
-  // Register JWT authentication decorator if not present
-  if (!fastify.authenticate) {
-    fastify.decorate('authenticate', async function (request, reply) {
-      try {
-        await request.jwtVerify();
-      } catch (err) {
-        reply.code(401).send({ error: 'Unauthorized' });
-      }
-    });
-  }
 }

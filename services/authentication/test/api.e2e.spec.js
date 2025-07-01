@@ -8,6 +8,7 @@ import loginRoutes from '../src/routes/login.js';
 import meRoutes from '../src/routes/me.js';
 import jwtConfig from '../src/plugins/jwt.js';
 import mongoConfig from '../src/plugins/mongodb.js';
+import authenticatePlugin from '../src/plugins/authenticate.js';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import supertest from 'supertest';
 
@@ -19,6 +20,7 @@ beforeAll(async () => {
   fastify = Fastify();
   await fastify.register(mongoPlugin, { ...mongoConfig, url: uri });
   await fastify.register(jwtPlugin, jwtConfig);
+  await fastify.register(authenticatePlugin);
   await fastify.register(registerRoutes, { prefix: '/auth' });
   await fastify.register(loginRoutes, { prefix: '/auth' });
   await fastify.register(meRoutes, { prefix: '/auth' });
