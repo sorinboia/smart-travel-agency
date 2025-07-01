@@ -66,6 +66,15 @@ spec:
             echo "Applying anonymous 'public' (read/write) policy to bucket '${BUCKET_NAME}'..."
             mc anonymous set public local/${BUCKET_NAME}
 
+            echo "Downloading seed data from ${SEED_BASE_URL} …"
+            for f in flights.json hotels.json weather.json ; do
+              echo "  – $f"
+              curl -fsSL "${SEED_BASE_URL}/$f" -o "/tmp/$f"
+              echo "    uploading to bucket…"
+              mc cp "/tmp/$f" "local/${BUCKET_NAME}/$f"
+            done
+            echo "Seed data uploaded."
+
             echo "MinIO setup complete. Bringing server process to foreground."
             wait
         env:
@@ -74,6 +83,8 @@ spec:
           value: "minioadmin"   # Change to a secure value or use secretKeyRef
         - name: MINIO_SECRET_KEY
           value: "minioadmin"   # Change to a secure value or use secretKeyRef
+        - name: SEED_BASE_URL
+          value: "https://raw.githubusercontent.com/sorinboia/smart-travel-agency/refs/heads/main/minio/"
         ports:
         - containerPort: 9000  # API Port
           name: api
