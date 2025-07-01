@@ -51,7 +51,7 @@ spec:
             echo "Configuring mc alias..."
             mc alias set local http://localhost:9000 ${ACCESS_KEY} ${SECRET_KEY} --api s3v4
 
-            BUCKET_NAME="aigw"
+            BUCKET_NAME="smart-travel-agency"
             echo "Checking/Creating bucket '${BUCKET_NAME}'..."
             if ! mc ls local/${BUCKET_NAME} > /dev/null 2>&1; then
               mc mb local/${BUCKET_NAME}
@@ -137,5 +137,5 @@ spec:
   - protocol: TCP
     port: 3090
     targetPort: 3090
-    nodePort: 30090   # Adjust this value if necessary
+    nodePort: 30190  
 
