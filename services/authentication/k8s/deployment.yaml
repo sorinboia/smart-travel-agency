@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sta-auth-service
+  namespace: smart-travel-agency
+  labels:
+    app: sta-auth-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sta-auth-service
+  template:
+    metadata:
+      labels:
+        app: sta-auth-service
+    spec:
+      containers:
+        - name: sta-auth-service
+          image: sta-auth-service:latest
+          ports:
+            - containerPort: 4003
+          env:
+            - name: PORT
+              value: "4003"
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: sta-mongo-secret
+                  key: uri
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: sta-jwt-secret
+                  key: secret
+            - name: LOG_LEVEL
+              value: "info"
+            - name: BCRYPT_ROUNDS
+              value: "12"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 4003
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 4003
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sta-auth-service
+  namespace: smart-travel-agency
+  labels:
+    app: sta-auth-service
+spec:
+  type: ClusterIP
+  selector:
+    app: sta-auth-service
+  ports:
+    - protocol: TCP
+      port: 4003
+      targetPort: 4003

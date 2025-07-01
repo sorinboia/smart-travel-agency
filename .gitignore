@@ -1,0 +1,25 @@
+# Ignore all node_modules directories at any depth
+node_modules/
+**/node_modules/
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore coverage output
+coverage/
+.nyc_output/
+
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

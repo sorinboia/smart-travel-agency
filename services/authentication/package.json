@@ -1,0 +1,33 @@
+{
+  "name": "sta-authentication-service",
+  "version": "0.1.0",
+  "description": "Authentication microservice for Smart Travel Agency (Node.js, Fastify, MongoDB, JWT, bcrypt)",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "fastify": "^4.27.2",
+    "@fastify/jwt": "^7.0.0",
+    "@fastify/mongodb": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "zod": "^3.22.4",
+    "pino": "^8.17.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "mongodb-memory-server": "^8.14.0",
+    "nodemon": "^3.1.0",
+    "eslint": "^8.56.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
