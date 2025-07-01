@@ -1,0 +1,1322 @@
+[
+  {
+    "hotel_id": "ce998f5e-6a45-44f0-b249-beedc069b2ac",
+    "name": "Grand London Lodge",
+    "brand": "Marriott",
+    "address": {
+      "line1": "939 Example St",
+      "city": "London",
+      "country": "GB",
+      "postal": "55851"
+    },
+    "geo": {
+      "lat": 51.45102317375518,
+      "lon": -0.43869452819639443
+    },
+    "star_rating": 4.3,
+    "amenities": [
+      "airport_shuttle",
+      "pool",
+      "bar",
+      "wifi"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 117.15,
+          "currency": "USD"
+        },
+        "inventory": 7,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 266.37,
+          "currency": "USD"
+        },
+        "inventory": 9,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 5,
+        "price": {
+          "amount": 256.38,
+          "currency": "USD"
+        },
+        "inventory": 3,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/8c480eba-a01c-494a-86a1-a6b074b43297.jpg",
+      "images/hotels/c68a6e43-d950-4271-960c-318612775f04.jpg",
+      "images/hotels/e7b00d2e-acc7-4e7a-a618-2051328cd044.jpg"
+    ],
+    "tags": [
+      "business",
+      "city-center"
+    ]
+  },
+  {
+    "hotel_id": "3748e9ec-897e-4f2f-919c-951bb6935886",
+    "name": "Royal London Suites",
+    "brand": "Marriott",
+    "address": {
+      "line1": "159 Example St",
+      "city": "London",
+      "country": "GB",
+      "postal": "20114"
+    },
+    "geo": {
+      "lat": 51.44957921016546,
+      "lon": -0.42548798263286
+    },
+    "star_rating": 4.0,
+    "amenities": [
+      "wifi",
+      "bar",
+      "airport_shuttle",
+      "pool"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 95.73,
+          "currency": "USD"
+        },
+        "inventory": 7,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 149.2,
+          "currency": "USD"
+        },
+        "inventory": 10,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 3,
+        "price": {
+          "amount": 393.8,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/64a2ed6d-c385-468a-b7f7-d17aa1187dd5.jpg",
+      "images/hotels/8b5e027c-bf1e-4793-b043-6fcc1645853b.jpg",
+      "images/hotels/4b48b5bd-5249-4994-b58e-a935e8e89405.jpg"
+    ],
+    "tags": [
+      "luxury",
+      "city-center"
+    ]
+  },
+  {
+    "hotel_id": "2f508c3a-506f-4e64-83bc-b2d18c888a69",
+    "name": "Garden New York Hotel",
+    "brand": "Marriott",
+    "address": {
+      "line1": "547 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "41348"
+    },
+    "geo": {
+      "lat": 40.62224678965628,
+      "lon": -73.74723761289091
+    },
+    "star_rating": 3.9,
+    "amenities": [
+      "spa",
+      "airport_shuttle",
+      "bar",
+      "pool"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 198.13,
+          "currency": "USD"
+        },
+        "inventory": 8,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 260.06,
+          "currency": "USD"
+        },
+        "inventory": 9,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 4,
+        "price": {
+          "amount": 530.44,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/1b3fc315-a8c4-4433-9d9a-b00eb66de343.jpg",
+      "images/hotels/4985e930-6192-4972-aec4-a8b07d3d0437.jpg",
+      "images/hotels/97d3432c-ad1e-4ed5-9fb0-784c43c0000d.jpg"
+    ],
+    "tags": [
+      "family-friendly",
+      "budget"
+    ]
+  },
+  {
+    "hotel_id": "72658d92-b488-4d5d-b2a2-26700d54b525",
+    "name": "Pacific London Inn",
+    "brand": "Independent",
+    "address": {
+      "line1": "872 Example St",
+      "city": "London",
+      "country": "GB",
+      "postal": "26341"
+    },
+    "geo": {
+      "lat": 51.448506301405935,
+      "lon": -0.4279883169708309
+    },
+    "star_rating": 3.5,
+    "amenities": [
+      "airport_shuttle",
+      "free_breakfast",
+      "spa",
+      "wifi"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 193.57,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 279.23,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 425.7,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/a69eabfa-5902-40e7-bf1b-24fae6d07db9.jpg",
+      "images/hotels/12b0065c-f5fd-4dd5-8d18-0acbc6334819.jpg",
+      "images/hotels/beea5f68-19e9-4b4a-8cc6-ac2e44f0cf1d.jpg"
+    ],
+    "tags": [
+      "family-friendly",
+      "city-center"
+    ]
+  },
+  {
+    "hotel_id": "45c89555-e43d-4e8d-8bb2-11244b722afb",
+    "name": "Grand Tokyo Resort",
+    "brand": "Hilton",
+    "address": {
+      "line1": "860 Example St",
+      "city": "Tokyo",
+      "country": "JP",
+      "postal": "95191"
+    },
+    "geo": {
+      "lat": 35.532929035591614,
+      "lon": 139.74440493068218
+    },
+    "star_rating": 3.1,
+    "amenities": [
+      "parking",
+      "bar",
+      "gym",
+      "spa"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 133.83,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 123.42,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 3,
+        "price": {
+          "amount": 521.66,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/25a8517e-2adc-4949-a0aa-3105f1f0104c.jpg",
+      "images/hotels/669efe5c-0d7c-4edc-a4a3-555ee02f52ca.jpg",
+      "images/hotels/ce75693e-c701-4c8f-b6ed-79987a35894f.jpg"
+    ],
+    "tags": [
+      "family-friendly",
+      "luxury"
+    ]
+  },
+  {
+    "hotel_id": "ef76689f-7e18-4767-befa-6834bab92234",
+    "name": "Central Tokyo Retreat",
+    "brand": "Independent",
+    "address": {
+      "line1": "469 Example St",
+      "city": "Tokyo",
+      "country": "JP",
+      "postal": "18232"
+    },
+    "geo": {
+      "lat": 35.510485789529,
+      "lon": 139.82031468856619
+    },
+    "star_rating": 4.2,
+    "amenities": [
+      "wifi",
+      "bar",
+      "pool",
+      "free_breakfast"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 109.03,
+          "currency": "USD"
+        },
+        "inventory": 3,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 197.26,
+          "currency": "USD"
+        },
+        "inventory": 10,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 315.56,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/2432a4fa-ee69-4e9f-88bd-a36613ffdb24.jpg",
+      "images/hotels/9722d17c-7ac7-4bd0-8f8a-055c29f31b24.jpg",
+      "images/hotels/88610e89-2a9f-49be-9cca-33801ea5d4d6.jpg"
+    ],
+    "tags": [
+      "family-friendly",
+      "luxury"
+    ]
+  },
+  {
+    "hotel_id": "cb7842fa-4c35-4add-b81f-3a406a93a530",
+    "name": "Garden London Hotel",
+    "brand": "Hilton",
+    "address": {
+      "line1": "651 Example St",
+      "city": "London",
+      "country": "GB",
+      "postal": "60709"
+    },
+    "geo": {
+      "lat": 51.51810394225515,
+      "lon": -0.4789349738930787
+    },
+    "star_rating": 3.0,
+    "amenities": [
+      "gym",
+      "airport_shuttle",
+      "parking",
+      "wifi"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 172.58,
+          "currency": "USD"
+        },
+        "inventory": 6,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 127.98,
+          "currency": "USD"
+        },
+        "inventory": 9,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 593.29,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/5cc08b32-7dd4-46da-96f9-681788ba5a4e.jpg",
+      "images/hotels/26248b4d-4665-4e65-860d-03283397a7cc.jpg",
+      "images/hotels/7a83f830-1bb1-4b9e-b4af-3bf7f85f914d.jpg"
+    ],
+    "tags": [
+      "business",
+      "family-friendly"
+    ]
+  },
+  {
+    "hotel_id": "b002555d-b138-431b-aeef-7b8f1472821f",
+    "name": "Garden New York Hotel",
+    "brand": "Hilton",
+    "address": {
+      "line1": "301 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "36422"
+    },
+    "geo": {
+      "lat": 40.59568062756591,
+      "lon": -73.80815301662848
+    },
+    "star_rating": 3.1,
+    "amenities": [
+      "pool",
+      "parking",
+      "spa",
+      "free_breakfast"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 136.81,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 171.5,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 3,
+        "price": {
+          "amount": 529.77,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/73196a15-8945-4dcf-80da-9e2fbdb5c4d0.jpg",
+      "images/hotels/0afea13b-26c5-4eff-9a67-79052f933c69.jpg",
+      "images/hotels/59c31e49-d4ab-4b88-86f0-00b2020616c9.jpg"
+    ],
+    "tags": [
+      "budget",
+      "luxury"
+    ]
+  },
+  {
+    "hotel_id": "de6c4b27-7db3-4602-ba13-922fc0d02d4b",
+    "name": "Royal London Hotel",
+    "brand": "Accor",
+    "address": {
+      "line1": "377 Example St",
+      "city": "London",
+      "country": "GB",
+      "postal": "78062"
+    },
+    "geo": {
+      "lat": 51.44667206958022,
+      "lon": -0.49603884933659337
+    },
+    "star_rating": 3.8,
+    "amenities": [
+      "free_breakfast",
+      "pool",
+      "gym",
+      "parking"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 115.25,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 179.03,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 308.33,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/5eccd752-349d-426c-9443-6c65706ccee1.jpg",
+      "images/hotels/edf60fa9-cc1c-4c7d-b899-4b3c2fa635f5.jpg",
+      "images/hotels/42ae535e-3784-4dfe-b76d-5a78f6037405.jpg"
+    ],
+    "tags": [
+      "budget",
+      "family-friendly"
+    ]
+  },
+  {
+    "hotel_id": "bb8b3b66-57dc-44b6-960e-6471f79fa235",
+    "name": "Garden New York Resort",
+    "brand": "Independent",
+    "address": {
+      "line1": "446 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "45986"
+    },
+    "geo": {
+      "lat": 40.65524693104925,
+      "lon": -73.74895221711702
+    },
+    "star_rating": 3.1,
+    "amenities": [
+      "free_breakfast",
+      "airport_shuttle",
+      "pool",
+      "gym"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 194.33,
+          "currency": "USD"
+        },
+        "inventory": 3,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 126.26,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 5,
+        "price": {
+          "amount": 384.0,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/a7f3befa-92c7-449e-9ec0-b9979d2c5a94.jpg",
+      "images/hotels/bdcd1c28-eba2-46a5-952c-74e378d38e37.jpg",
+      "images/hotels/5b2e1bf1-532d-4278-99ec-562cbb4b868b.jpg"
+    ],
+    "tags": [
+      "luxury",
+      "business"
+    ]
+  },
+  {
+    "hotel_id": "780be7d9-b856-417e-bb60-74fbad2ca189",
+    "name": "Central New York Resort",
+    "brand": "Hyatt",
+    "address": {
+      "line1": "455 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "20077"
+    },
+    "geo": {
+      "lat": 40.64869217783339,
+      "lon": -73.77515401184637
+    },
+    "star_rating": 3.8,
+    "amenities": [
+      "pool",
+      "gym",
+      "wifi",
+      "bar"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 168.28,
+          "currency": "USD"
+        },
+        "inventory": 8,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 284.44,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 325.1,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/1c7516bd-9ecf-4b73-96b2-96eff635b2af.jpg",
+      "images/hotels/0c53f007-737e-4442-b49b-6d00200da510.jpg",
+      "images/hotels/5362338c-44b2-49ba-92aa-352794d17a83.jpg"
+    ],
+    "tags": [
+      "budget",
+      "business"
+    ]
+  },
+  {
+    "hotel_id": "8ed46aae-3eb8-4d6b-bef6-dcdd19169a24",
+    "name": "Royal Tokyo Palace",
+    "brand": "Hilton",
+    "address": {
+      "line1": "463 Example St",
+      "city": "Tokyo",
+      "country": "JP",
+      "postal": "32630"
+    },
+    "geo": {
+      "lat": 35.58926790307862,
+      "lon": 139.77431111927424
+    },
+    "star_rating": 3.2,
+    "amenities": [
+      "bar",
+      "parking",
+      "airport_shuttle",
+      "wifi"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 146.0,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 273.25,
+          "currency": "USD"
+        },
+        "inventory": 3,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 3,
+        "price": {
+          "amount": 594.8,
+          "currency": "USD"
+        },
+        "inventory": 2,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/4a59ebf1-bc83-49fc-a81c-e4b72b47c224.jpg",
+      "images/hotels/efe38597-ac18-4ada-b058-73534e4b1351.jpg",
+      "images/hotels/c822e5d5-9035-4276-9fa2-bc30ff93b178.jpg"
+    ],
+    "tags": [
+      "budget",
+      "family-friendly"
+    ]
+  },
+  {
+    "hotel_id": "74944865-e6f5-4ffb-b183-4e7fe248fdac",
+    "name": "Pacific London Lodge",
+    "brand": "Hyatt",
+    "address": {
+      "line1": "479 Example St",
+      "city": "London",
+      "country": "GB",
+      "postal": "82305"
+    },
+    "geo": {
+      "lat": 51.43297712297137,
+      "lon": -0.41587535531653796
+    },
+    "star_rating": 3.1,
+    "amenities": [
+      "free_breakfast",
+      "bar",
+      "parking",
+      "spa"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 143.08,
+          "currency": "USD"
+        },
+        "inventory": 7,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 142.56,
+          "currency": "USD"
+        },
+        "inventory": 6,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 488.04,
+          "currency": "USD"
+        },
+        "inventory": 3,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/4b18a3ae-63e5-46b7-b308-80e017c1a633.jpg",
+      "images/hotels/9d325e48-9ad8-4a2f-99b3-a22ee510c701.jpg",
+      "images/hotels/3f5393d5-5288-48bf-838c-11b76a651828.jpg"
+    ],
+    "tags": [
+      "luxury",
+      "business"
+    ]
+  },
+  {
+    "hotel_id": "550587bc-64c3-42a8-a976-f628ee910d48",
+    "name": "Central Tokyo Lodge",
+    "brand": "Hilton",
+    "address": {
+      "line1": "852 Example St",
+      "city": "Tokyo",
+      "country": "JP",
+      "postal": "26274"
+    },
+    "geo": {
+      "lat": 35.5512102132924,
+      "lon": 139.76021245428075
+    },
+    "star_rating": 3.3,
+    "amenities": [
+      "spa",
+      "airport_shuttle",
+      "pool",
+      "free_breakfast"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 181.51,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 234.31,
+          "currency": "USD"
+        },
+        "inventory": 9,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 5,
+        "price": {
+          "amount": 465.05,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/08aa3aa7-4540-4111-a563-f859957e0d89.jpg",
+      "images/hotels/94dfe183-1f42-4079-8bab-8fb21433821e.jpg",
+      "images/hotels/25b15ebc-0b5a-4ca2-b3f3-1d5119692f71.jpg"
+    ],
+    "tags": [
+      "luxury",
+      "business"
+    ]
+  },
+  {
+    "hotel_id": "56cdee8f-0363-4906-a4da-b88a9cdaac23",
+    "name": "Urban Tokyo Lodge",
+    "brand": "Independent",
+    "address": {
+      "line1": "346 Example St",
+      "city": "Tokyo",
+      "country": "JP",
+      "postal": "83874"
+    },
+    "geo": {
+      "lat": 35.50351943035218,
+      "lon": 139.816178119162
+    },
+    "star_rating": 3.2,
+    "amenities": [
+      "pool",
+      "bar",
+      "gym",
+      "parking"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 129.99,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 280.02,
+          "currency": "USD"
+        },
+        "inventory": 9,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 335.71,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/a669d325-7e13-4b2f-aef3-0cb4b03eb96b.jpg",
+      "images/hotels/982d3654-196f-49a0-9194-81d9b708e9c1.jpg",
+      "images/hotels/5f384aea-84cb-45c8-8d52-62b4313ac7e9.jpg"
+    ],
+    "tags": [
+      "budget",
+      "family-friendly"
+    ]
+  },
+  {
+    "hotel_id": "af9ffe19-d7d5-437a-bee0-cdda4539af39",
+    "name": "Grand New York Suites",
+    "brand": "Accor",
+    "address": {
+      "line1": "426 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "73471"
+    },
+    "geo": {
+      "lat": 40.63774421577754,
+      "lon": -73.79408074316481
+    },
+    "star_rating": 3.3,
+    "amenities": [
+      "bar",
+      "parking",
+      "airport_shuttle",
+      "spa"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 95.69,
+          "currency": "USD"
+        },
+        "inventory": 6,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 177.44,
+          "currency": "USD"
+        },
+        "inventory": 8,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 336.77,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/4734a576-20e4-470a-abea-96c67c101166.jpg",
+      "images/hotels/bced5609-866f-469d-b28d-5a7bcaa8c59e.jpg",
+      "images/hotels/c3f9e148-83f8-4280-b0c2-6cf406e13679.jpg"
+    ],
+    "tags": [
+      "city-center",
+      "budget"
+    ]
+  },
+  {
+    "hotel_id": "2e32401f-f02b-42a2-820d-38617fc51edd",
+    "name": "Central New York Suites",
+    "brand": "Marriott",
+    "address": {
+      "line1": "834 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "52917"
+    },
+    "geo": {
+      "lat": 40.68467515352494,
+      "lon": -73.75598715711779
+    },
+    "star_rating": 3.4,
+    "amenities": [
+      "airport_shuttle",
+      "spa",
+      "pool",
+      "free_breakfast"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 139.85,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 124.17,
+          "currency": "USD"
+        },
+        "inventory": 7,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 4,
+        "price": {
+          "amount": 454.17,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": true
+      }
+    ],
+    "images": [
+      "images/hotels/25c2bf68-901f-4a79-b94c-14d37c061e6a.jpg",
+      "images/hotels/fee805ff-d916-4fde-99d6-4379ae850e59.jpg",
+      "images/hotels/fd23e471-e628-4526-a146-2bc488247bba.jpg"
+    ],
+    "tags": [
+      "city-center",
+      "budget"
+    ]
+  },
+  {
+    "hotel_id": "2553940a-3d13-4ba7-989a-be1584be614b",
+    "name": "Garden New York Retreat",
+    "brand": "Accor",
+    "address": {
+      "line1": "293 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "80345"
+    },
+    "geo": {
+      "lat": 40.59211774059472,
+      "lon": -73.81735029156287
+    },
+    "star_rating": 3.3,
+    "amenities": [
+      "pool",
+      "bar",
+      "airport_shuttle",
+      "spa"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 123.91,
+          "currency": "USD"
+        },
+        "inventory": 7,
+        "refundable": true
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 222.65,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": false
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 3,
+        "price": {
+          "amount": 385.22,
+          "currency": "USD"
+        },
+        "inventory": 4,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/d041458c-7f2a-4e4d-be43-14450d89b1a5.jpg",
+      "images/hotels/2a19517a-7d62-437e-a9a2-74a9ed8d8319.jpg",
+      "images/hotels/1751ee3f-096d-4b7c-95ff-eb41647ca178.jpg"
+    ],
+    "tags": [
+      "luxury",
+      "family-friendly"
+    ]
+  },
+  {
+    "hotel_id": "091cda3a-0b70-4ed0-89b4-6b04e3e17630",
+    "name": "Grand Tokyo Hotel",
+    "brand": "Hyatt",
+    "address": {
+      "line1": "814 Example St",
+      "city": "Tokyo",
+      "country": "JP",
+      "postal": "54444"
+    },
+    "geo": {
+      "lat": 35.55518318382721,
+      "lon": 139.7663606373213
+    },
+    "star_rating": 3.3,
+    "amenities": [
+      "free_breakfast",
+      "pool",
+      "wifi",
+      "bar"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 84.67,
+          "currency": "USD"
+        },
+        "inventory": 6,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 213.48,
+          "currency": "USD"
+        },
+        "inventory": 3,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 3,
+        "max_occupancy": 5,
+        "price": {
+          "amount": 306.88,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/adeb613e-fd76-45d7-9e2e-639a789efb04.jpg",
+      "images/hotels/20f194d5-65e8-4d69-9e5f-a6913fdc0f83.jpg",
+      "images/hotels/9acbf827-2d45-490e-9fa8-8f98e9460862.jpg"
+    ],
+    "tags": [
+      "luxury",
+      "city-center"
+    ]
+  },
+  {
+    "hotel_id": "af86add6-9c5f-46bf-86ff-6a0ece1d673f",
+    "name": "Garden New York Lodge",
+    "brand": "Independent",
+    "address": {
+      "line1": "502 Example St",
+      "city": "New York",
+      "country": "US",
+      "postal": "83783"
+    },
+    "geo": {
+      "lat": 40.62127905647374,
+      "lon": -73.74652511667561
+    },
+    "star_rating": 3.7,
+    "amenities": [
+      "gym",
+      "spa",
+      "pool",
+      "airport_shuttle"
+    ],
+    "rooms": [
+      {
+        "room_type": "Single",
+        "beds": 1,
+        "max_occupancy": 1,
+        "price": {
+          "amount": 175.61,
+          "currency": "USD"
+        },
+        "inventory": 1,
+        "refundable": false
+      },
+      {
+        "room_type": "Double",
+        "beds": 2,
+        "max_occupancy": 2,
+        "price": {
+          "amount": 167.8,
+          "currency": "USD"
+        },
+        "inventory": 10,
+        "refundable": true
+      },
+      {
+        "room_type": "Suite",
+        "beds": 2,
+        "max_occupancy": 6,
+        "price": {
+          "amount": 309.68,
+          "currency": "USD"
+        },
+        "inventory": 5,
+        "refundable": false
+      }
+    ],
+    "images": [
+      "images/hotels/1c1443a8-f8b0-4abd-8d00-b2e65212528a.jpg",
+      "images/hotels/05ea0243-a257-4838-89c6-cf786a4e797b.jpg",
+      "images/hotels/cad87201-9e3e-4065-9adf-fc7e08d9e17d.jpg"
+    ],
+    "tags": [
+      "business",
+      "luxury"
+    ]
+  }
+]

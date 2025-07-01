@@ -1,0 +1,4569 @@
+[
+  {
+    "flight_id": "c5d9d2f6-fd62-4e7b-844e-9efe006a8a8d",
+    "airline": "Delta",
+    "flight_number": "DL195",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-04T00:47:00",
+    "arrival_utc": "2025-09-04T09:07:00",
+    "duration_min": 500,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 7,
+        "price": {
+          "amount": 411.61,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1039.1,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "77acfe6e-4fe9-4e3d-ad8a-58735f9f0bf8",
+    "airline": "Delta",
+    "flight_number": "BA814",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-20T00:35:00",
+    "arrival_utc": "2025-09-20T08:16:00",
+    "duration_min": 461,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 650.66,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1618.73,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "b217319e-ee3d-44d9-b7d7-9845c3e4a1ab",
+    "airline": "American Airlines",
+    "flight_number": "DL487",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-07T10:06:00",
+    "arrival_utc": "2025-09-07T16:53:00",
+    "duration_min": 407,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 12,
+        "price": {
+          "amount": 348.36,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 2191.41,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "4d3fe206-1d5e-427d-8a65-87730c684122",
+    "airline": "ANA",
+    "flight_number": "UA750",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-07T22:04:00",
+    "arrival_utc": "2025-09-08T04:27:00",
+    "duration_min": 383,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 7,
+        "price": {
+          "amount": 686.53,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 2286.37,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "fcce2470-957b-4e62-8afe-a50f655d6606",
+    "airline": "United",
+    "flight_number": "UA376",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-12T06:42:00",
+    "arrival_utc": "2025-09-12T14:58:00",
+    "duration_min": 496,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 335.7,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 2066.6,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "256bc0c4-1bb7-40ce-b863-19b493d14835",
+    "airline": "British Airways",
+    "flight_number": "UA505",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-11T01:14:00",
+    "arrival_utc": "2025-09-11T14:14:00",
+    "duration_min": 780,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 1,
+        "price": {
+          "amount": 702.52,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 1005.9,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "23576ef7-0ed6-4e06-9767-8fc65455ea00",
+    "airline": "American Airlines",
+    "flight_number": "UA193",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-05T07:47:00",
+    "arrival_utc": "2025-09-05T18:34:00",
+    "duration_min": 647,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 17,
+        "price": {
+          "amount": 431.37,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1479.19,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "95ab6451-ffef-43e0-b9fb-2b84b042fff7",
+    "airline": "American Airlines",
+    "flight_number": "NH666",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-21T05:50:00",
+    "arrival_utc": "2025-09-21T17:38:00",
+    "duration_min": 708,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 13,
+        "price": {
+          "amount": 598.2,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1853.42,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "260e463e-8e50-41b5-8a17-48e03b211ecb",
+    "airline": "ANA",
+    "flight_number": "AA880",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-29T17:48:00",
+    "arrival_utc": "2025-09-30T02:04:00",
+    "duration_min": 496,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 470.09,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1153.05,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "f418d353-a86a-410f-912d-2119c8d8dcc1",
+    "airline": "ANA",
+    "flight_number": "NH345",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-17T19:12:00",
+    "arrival_utc": "2025-09-18T02:30:00",
+    "duration_min": 438,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 11,
+        "price": {
+          "amount": 681.26,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1681.77,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "e814b4b0-3e71-4eee-aa8c-6a23e00e8af1",
+    "airline": "ANA",
+    "flight_number": "AA993",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-03T02:46:00",
+    "arrival_utc": "2025-09-03T12:54:00",
+    "duration_min": 608,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 2,
+        "price": {
+          "amount": 788.99,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 2,
+        "price": {
+          "amount": 1955.6,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "70c15edd-f45a-464c-b9d8-ad84c670633a",
+    "airline": "Delta",
+    "flight_number": "BA330",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-25T23:44:00",
+    "arrival_utc": "2025-09-26T07:26:00",
+    "duration_min": 462,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 9,
+        "price": {
+          "amount": 499.5,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 2339.38,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "09042eb2-760c-4e3f-83ba-85c98b9584de",
+    "airline": "ANA",
+    "flight_number": "DL626",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-18T07:37:00",
+    "arrival_utc": "2025-09-18T15:29:00",
+    "duration_min": 472,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 0,
+        "price": {
+          "amount": 335.5,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1007.84,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "25738237-7a40-4f0f-aecb-5290ca54afae",
+    "airline": "Delta",
+    "flight_number": "DL774",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-07T17:08:00",
+    "arrival_utc": "2025-09-08T05:18:00",
+    "duration_min": 730,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 18,
+        "price": {
+          "amount": 588.11,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 2192.0,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "1ccfbdbc-5109-4366-baea-e66e1be4ceaa",
+    "airline": "Delta",
+    "flight_number": "BA296",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-15T23:03:00",
+    "arrival_utc": "2025-09-16T10:47:00",
+    "duration_min": 704,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 792.08,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 1544.19,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "84385c90-0665-4bbc-af87-c916e8abcd21",
+    "airline": "Delta",
+    "flight_number": "BA270",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-06T08:29:00",
+    "arrival_utc": "2025-09-06T16:36:00",
+    "duration_min": 487,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 2,
+        "price": {
+          "amount": 521.57,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 1943.43,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "eb12b3c9-2699-43ee-9a55-7f2db776b99f",
+    "airline": "ANA",
+    "flight_number": "UA813",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-28T12:57:00",
+    "arrival_utc": "2025-09-28T19:27:00",
+    "duration_min": 390,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 5,
+        "price": {
+          "amount": 489.49,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 2382.43,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "popular",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "3b1c5aa9-8a89-4a1d-87e3-8b86c342dbed",
+    "airline": "American Airlines",
+    "flight_number": "AA261",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-07T09:13:00",
+    "arrival_utc": "2025-09-07T15:42:00",
+    "duration_min": 389,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 18,
+        "price": {
+          "amount": 667.87,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 991.46,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "5d4ecd91-c014-4b53-b8c5-7d5d55109bee",
+    "airline": "American Airlines",
+    "flight_number": "AA635",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-20T02:43:00",
+    "arrival_utc": "2025-09-20T16:04:00",
+    "duration_min": 801,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 7,
+        "price": {
+          "amount": 501.89,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 1891.01,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "f5f91dbd-0f68-4dea-8bbf-a548885a4918",
+    "airline": "Delta",
+    "flight_number": "UA736",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-23T10:15:00",
+    "arrival_utc": "2025-09-23T18:30:00",
+    "duration_min": 495,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 12,
+        "price": {
+          "amount": 365.44,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1405.88,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "25a70e6d-7ad0-4f4c-b91c-b9b518a99a29",
+    "airline": "United",
+    "flight_number": "AA820",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-18T06:32:00",
+    "arrival_utc": "2025-09-18T14:47:00",
+    "duration_min": 495,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 4,
+        "price": {
+          "amount": 766.63,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1491.24,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "4b731d23-4b81-4592-a4e2-cf66947a48de",
+    "airline": "American Airlines",
+    "flight_number": "BA378",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-27T17:19:00",
+    "arrival_utc": "2025-09-28T07:16:00",
+    "duration_min": 837,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 3,
+        "price": {
+          "amount": 769.47,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 1084.69,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "3ab72d50-958a-4f75-b2d9-bb014b66799b",
+    "airline": "Delta",
+    "flight_number": "DL441",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-22T20:54:00",
+    "arrival_utc": "2025-09-23T05:09:00",
+    "duration_min": 495,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 16,
+        "price": {
+          "amount": 544.27,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 1914.86,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "a806fdd1-aa9e-4cc1-8951-d658ad8c3e03",
+    "airline": "American Airlines",
+    "flight_number": "AA251",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-15T17:45:00",
+    "arrival_utc": "2025-09-16T03:23:00",
+    "duration_min": 578,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 17,
+        "price": {
+          "amount": 304.83,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 2,
+        "price": {
+          "amount": 1772.94,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "8838ba8e-4665-4c17-b4ea-3c6602798084",
+    "airline": "American Airlines",
+    "flight_number": "UA735",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-10T11:57:00",
+    "arrival_utc": "2025-09-11T01:54:00",
+    "duration_min": 837,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 1,
+        "price": {
+          "amount": 749.46,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1967.09,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "98e2c4a3-df12-40c5-a7a7-c2c2e79c4408",
+    "airline": "United",
+    "flight_number": "BA373",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-28T05:51:00",
+    "arrival_utc": "2025-09-28T18:46:00",
+    "duration_min": 775,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 5,
+        "price": {
+          "amount": 740.71,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 2,
+        "price": {
+          "amount": 2078.5,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "527613bf-9ce3-4371-b38e-14b43a12f226",
+    "airline": "United",
+    "flight_number": "NH385",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-28T15:14:00",
+    "arrival_utc": "2025-09-28T22:56:00",
+    "duration_min": 462,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 14,
+        "price": {
+          "amount": 474.83,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 937.86,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "ef647c3b-e757-4456-b7f4-287c96a6f27b",
+    "airline": "British Airways",
+    "flight_number": "AA371",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-17T12:43:00",
+    "arrival_utc": "2025-09-18T01:54:00",
+    "duration_min": 791,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 17,
+        "price": {
+          "amount": 465.57,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 2303.26,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "0d587e9f-8a0e-4c71-99ef-03651b6f1367",
+    "airline": "ANA",
+    "flight_number": "DL825",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-14T11:46:00",
+    "arrival_utc": "2025-09-15T00:28:00",
+    "duration_min": 762,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 10,
+        "price": {
+          "amount": 518.2,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 2339.21,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "da74249d-9fe4-4690-b75f-b3526bf2d275",
+    "airline": "ANA",
+    "flight_number": "AA416",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-30T17:43:00",
+    "arrival_utc": "2025-10-01T05:51:00",
+    "duration_min": 728,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 6,
+        "price": {
+          "amount": 482.11,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1897.05,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "ed890f1f-8d84-4cfa-8670-5f7d82335e87",
+    "airline": "United",
+    "flight_number": "AA953",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-23T09:35:00",
+    "arrival_utc": "2025-09-23T16:40:00",
+    "duration_min": 425,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 6,
+        "price": {
+          "amount": 510.22,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 2,
+        "price": {
+          "amount": 1884.82,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "f85fcbd0-eed5-4583-a265-b19af3ba2452",
+    "airline": "Delta",
+    "flight_number": "NH627",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-14T18:38:00",
+    "arrival_utc": "2025-09-15T06:13:00",
+    "duration_min": 695,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 10,
+        "price": {
+          "amount": 532.49,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1717.88,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "d6f48611-0421-4b38-b231-f514610c9fff",
+    "airline": "American Airlines",
+    "flight_number": "DL566",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-27T07:43:00",
+    "arrival_utc": "2025-09-27T16:21:00",
+    "duration_min": 518,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 7,
+        "price": {
+          "amount": 703.28,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 973.94,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "1d780bd8-88d8-41d2-a431-7e142e4586a0",
+    "airline": "British Airways",
+    "flight_number": "AA575",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-23T12:31:00",
+    "arrival_utc": "2025-09-23T21:55:00",
+    "duration_min": 564,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 7,
+        "price": {
+          "amount": 373.79,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 2145.47,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "e1c18f3f-bfae-47b7-89bb-8b36c91e9722",
+    "airline": "British Airways",
+    "flight_number": "UA560",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-05T14:42:00",
+    "arrival_utc": "2025-09-06T01:13:00",
+    "duration_min": 631,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 17,
+        "price": {
+          "amount": 597.73,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1582.79,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "2e692ca0-038c-4c8c-9b57-afa9b163cab0",
+    "airline": "ANA",
+    "flight_number": "AA182",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-09T16:31:00",
+    "arrival_utc": "2025-09-10T03:51:00",
+    "duration_min": 680,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 7,
+        "price": {
+          "amount": 437.3,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 1275.19,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "95f135aa-dc00-4b68-9e44-2694e0237460",
+    "airline": "Delta",
+    "flight_number": "BA952",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-13T22:09:00",
+    "arrival_utc": "2025-09-14T10:10:00",
+    "duration_min": 721,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 6,
+        "price": {
+          "amount": 332.11,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1768.18,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "f8be03b7-4ed1-49fc-9044-c7a2378f77ee",
+    "airline": "American Airlines",
+    "flight_number": "AA919",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-01T18:24:00",
+    "arrival_utc": "2025-09-02T04:28:00",
+    "duration_min": 604,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 0,
+        "price": {
+          "amount": 771.37,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 2265.52,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "def44ff1-2c5a-4f5b-bf1b-780fb93e404e",
+    "airline": "American Airlines",
+    "flight_number": "AA127",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-08T08:27:00",
+    "arrival_utc": "2025-09-08T18:35:00",
+    "duration_min": 608,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 0,
+        "price": {
+          "amount": 494.43,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 2,
+        "price": {
+          "amount": 2244.81,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "4e3da42c-b4dd-4e96-8a16-5d72e98dc405",
+    "airline": "ANA",
+    "flight_number": "NH879",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-21T13:08:00",
+    "arrival_utc": "2025-09-22T02:31:00",
+    "duration_min": 803,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 14,
+        "price": {
+          "amount": 390.86,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1423.76,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "330fa69f-29d7-44a4-8b3c-6af2ce43f588",
+    "airline": "Delta",
+    "flight_number": "BA304",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-27T02:30:00",
+    "arrival_utc": "2025-09-27T08:39:00",
+    "duration_min": 369,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 17,
+        "price": {
+          "amount": 326.04,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1940.23,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "a615b200-11fc-43aa-9cfd-67640aa3014e",
+    "airline": "British Airways",
+    "flight_number": "NH210",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-16T21:07:00",
+    "arrival_utc": "2025-09-17T07:55:00",
+    "duration_min": 648,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 6,
+        "price": {
+          "amount": 532.52,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1168.46,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "68510f00-29e2-4e58-a906-6d406d1e5df8",
+    "airline": "Delta",
+    "flight_number": "NH970",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-19T21:58:00",
+    "arrival_utc": "2025-09-20T07:10:00",
+    "duration_min": 552,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 12,
+        "price": {
+          "amount": 770.74,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 1847.36,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "62950a06-db92-4c5e-8986-8dfe2a3bd255",
+    "airline": "Delta",
+    "flight_number": "UA470",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-18T13:42:00",
+    "arrival_utc": "2025-09-18T22:51:00",
+    "duration_min": 549,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 2,
+        "price": {
+          "amount": 552.98,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 2259.32,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "7639d189-5d5c-4708-893a-e8c95b995723",
+    "airline": "ANA",
+    "flight_number": "BA950",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-14T05:46:00",
+    "arrival_utc": "2025-09-14T16:13:00",
+    "duration_min": 627,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 435.04,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1596.92,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "edd48ceb-5530-4646-9542-22045198c6d8",
+    "airline": "ANA",
+    "flight_number": "NH448",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-25T14:36:00",
+    "arrival_utc": "2025-09-26T01:48:00",
+    "duration_min": 672,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 12,
+        "price": {
+          "amount": 468.2,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1190.94,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "50cd63e3-ef0f-45ac-afbf-7fbfd9ea31e6",
+    "airline": "United",
+    "flight_number": "UA911",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-01T16:12:00",
+    "arrival_utc": "2025-09-01T22:55:00",
+    "duration_min": 403,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 7,
+        "price": {
+          "amount": 660.04,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 2113.06,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "489d5653-f14d-4c40-a151-94a5a6e9bcb0",
+    "airline": "United",
+    "flight_number": "AA438",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-08T12:44:00",
+    "arrival_utc": "2025-09-08T20:48:00",
+    "duration_min": 484,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 9,
+        "price": {
+          "amount": 631.98,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1785.56,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "954c4eea-8e62-4cab-8136-53af27f7c9b3",
+    "airline": "ANA",
+    "flight_number": "AA878",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-09T07:07:00",
+    "arrival_utc": "2025-09-09T19:16:00",
+    "duration_min": 729,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 6,
+        "price": {
+          "amount": 457.77,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1246.22,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "e206a7f0-198a-4076-97c1-8b129ab9a08a",
+    "airline": "American Airlines",
+    "flight_number": "NH814",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-10T07:23:00",
+    "arrival_utc": "2025-09-10T14:54:00",
+    "duration_min": 451,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 9,
+        "price": {
+          "amount": 307.07,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 972.83,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "overnight",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "39d41de8-bdb9-4771-98ee-045f45166cd9",
+    "airline": "Delta",
+    "flight_number": "DL510",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-19T09:30:00",
+    "arrival_utc": "2025-09-19T19:35:00",
+    "duration_min": 605,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 14,
+        "price": {
+          "amount": 470.35,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 2405.7,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "92b76738-d3be-409e-a69e-c93324092883",
+    "airline": "American Airlines",
+    "flight_number": "UA720",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-21T21:03:00",
+    "arrival_utc": "2025-09-22T04:20:00",
+    "duration_min": 437,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 4,
+        "price": {
+          "amount": 705.57,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 2490.27,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "768f5478-096a-4f4f-be24-a1d5c053c6d9",
+    "airline": "British Airways",
+    "flight_number": "BA370",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-30T14:19:00",
+    "arrival_utc": "2025-10-01T03:39:00",
+    "duration_min": 800,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 18,
+        "price": {
+          "amount": 795.02,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 1875.41,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "cb57b6b6-cbdc-4a2a-9653-cbffb886a0e3",
+    "airline": "ANA",
+    "flight_number": "NH819",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-08T05:35:00",
+    "arrival_utc": "2025-09-08T12:13:00",
+    "duration_min": 398,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 5,
+        "price": {
+          "amount": 301.34,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1366.01,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "e64c715f-0cab-4e13-9f76-20c493f688b5",
+    "airline": "British Airways",
+    "flight_number": "NH946",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-08T08:50:00",
+    "arrival_utc": "2025-09-08T21:35:00",
+    "duration_min": 765,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 594.89,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1083.64,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "ce99a26d-742f-4e9e-b2ff-28fe0298ad54",
+    "airline": "United",
+    "flight_number": "NH612",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-06T09:38:00",
+    "arrival_utc": "2025-09-06T22:01:00",
+    "duration_min": 743,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 18,
+        "price": {
+          "amount": 760.6,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 1649.92,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "0286c255-1f74-4edd-bc6e-b989d246c4a1",
+    "airline": "ANA",
+    "flight_number": "AA141",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-20T01:56:00",
+    "arrival_utc": "2025-09-20T11:37:00",
+    "duration_min": 581,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 10,
+        "price": {
+          "amount": 601.86,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 1266.28,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "dfd73a9c-4ab7-42b1-8f78-3543fd7bb6b7",
+    "airline": "ANA",
+    "flight_number": "NH786",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-15T08:11:00",
+    "arrival_utc": "2025-09-15T19:10:00",
+    "duration_min": 659,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 13,
+        "price": {
+          "amount": 617.39,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 1652.02,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "13444297-6d9f-497b-b313-cb65b8f7c453",
+    "airline": "ANA",
+    "flight_number": "DL891",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-14T22:31:00",
+    "arrival_utc": "2025-09-15T06:58:00",
+    "duration_min": 507,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 12,
+        "price": {
+          "amount": 706.78,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1040.9,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "12614234-b57e-4a09-90c6-e7db54cda000",
+    "airline": "ANA",
+    "flight_number": "UA815",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-02T06:33:00",
+    "arrival_utc": "2025-09-02T15:38:00",
+    "duration_min": 545,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 19,
+        "price": {
+          "amount": 678.22,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 1225.69,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "26e6c2aa-4c67-4fa6-854e-3fe7ec9937bf",
+    "airline": "Delta",
+    "flight_number": "UA220",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-21T19:51:00",
+    "arrival_utc": "2025-09-22T03:53:00",
+    "duration_min": 482,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 5,
+        "price": {
+          "amount": 455.38,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1552.79,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "06af3344-194c-438a-a9bb-ffef278e2da3",
+    "airline": "United",
+    "flight_number": "BA713",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-30T22:18:00",
+    "arrival_utc": "2025-10-01T08:38:00",
+    "duration_min": 620,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 8,
+        "price": {
+          "amount": 507.75,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1289.97,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "02293503-2ff4-44a2-9a76-a5f7f59c6f95",
+    "airline": "British Airways",
+    "flight_number": "UA651",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-25T13:21:00",
+    "arrival_utc": "2025-09-26T03:19:00",
+    "duration_min": 838,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 16,
+        "price": {
+          "amount": 433.59,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 2061.68,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "f71ad1b0-7938-49ab-a106-f07d8f900789",
+    "airline": "Delta",
+    "flight_number": "NH862",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-25T17:24:00",
+    "arrival_utc": "2025-09-26T03:17:00",
+    "duration_min": 593,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 10,
+        "price": {
+          "amount": 734.8,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1273.7,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "2ab7da54-755f-45e4-ad2b-4e386fd397bb",
+    "airline": "Delta",
+    "flight_number": "AA567",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-26T20:09:00",
+    "arrival_utc": "2025-09-27T06:22:00",
+    "duration_min": 613,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 1,
+        "price": {
+          "amount": 363.12,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 2298.7,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "414964d3-cd5c-449e-802d-f688ad594aa7",
+    "airline": "ANA",
+    "flight_number": "UA993",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-05T02:30:00",
+    "arrival_utc": "2025-09-05T15:10:00",
+    "duration_min": 760,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 8,
+        "price": {
+          "amount": 469.28,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 2262.82,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "4f19b363-c758-45f6-9504-31280e1bdf37",
+    "airline": "United",
+    "flight_number": "BA810",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-03T07:40:00",
+    "arrival_utc": "2025-09-03T19:30:00",
+    "duration_min": 710,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 9,
+        "price": {
+          "amount": 798.71,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 2465.34,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "cd8897d8-e9ec-45ab-ab59-34348739abcb",
+    "airline": "British Airways",
+    "flight_number": "BA180",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-11T01:18:00",
+    "arrival_utc": "2025-09-11T10:21:00",
+    "duration_min": 543,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 11,
+        "price": {
+          "amount": 515.34,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1559.28,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "fc1d607a-7f5a-443a-9f3a-bee29b6200c3",
+    "airline": "United",
+    "flight_number": "NH793",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-08T15:58:00",
+    "arrival_utc": "2025-09-09T02:56:00",
+    "duration_min": 658,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 4,
+        "price": {
+          "amount": 416.09,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1308.52,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "14f48a29-bfb9-41e5-91ab-e1bb1571102e",
+    "airline": "United",
+    "flight_number": "UA209",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-15T11:37:00",
+    "arrival_utc": "2025-09-15T20:10:00",
+    "duration_min": 513,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 781.01,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 2252.49,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "7f2342fb-c97b-4d88-8db7-28972de7b22d",
+    "airline": "American Airlines",
+    "flight_number": "UA952",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-19T09:44:00",
+    "arrival_utc": "2025-09-19T18:15:00",
+    "duration_min": 511,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 0,
+        "price": {
+          "amount": 788.97,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 4,
+        "price": {
+          "amount": 912.96,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "860ad4e9-11b0-486f-a2b2-b47a47f74dc5",
+    "airline": "ANA",
+    "flight_number": "UA134",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-26T11:14:00",
+    "arrival_utc": "2025-09-26T22:39:00",
+    "duration_min": 685,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 6,
+        "price": {
+          "amount": 610.45,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 2345.45,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "b66cc524-2c9c-42f0-a0c8-179682b0aaa5",
+    "airline": "American Airlines",
+    "flight_number": "AA379",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-03T09:20:00",
+    "arrival_utc": "2025-09-03T21:42:00",
+    "duration_min": 742,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 13,
+        "price": {
+          "amount": 387.82,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 2302.34,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "5b850fa8-8bee-4144-9334-5bd9f5fad0c3",
+    "airline": "American Airlines",
+    "flight_number": "NH192",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-24T10:51:00",
+    "arrival_utc": "2025-09-24T17:49:00",
+    "duration_min": 418,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 14,
+        "price": {
+          "amount": 781.45,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 2276.22,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "1cd5206f-af30-4aad-95a1-16e2d7ec11cd",
+    "airline": "Delta",
+    "flight_number": "AA674",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-18T03:29:00",
+    "arrival_utc": "2025-09-18T12:37:00",
+    "duration_min": 548,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 8,
+        "price": {
+          "amount": 592.28,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 1979.74,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "159a5eae-f135-4834-80eb-58c8e6b24836",
+    "airline": "ANA",
+    "flight_number": "UA218",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-27T14:58:00",
+    "arrival_utc": "2025-09-28T02:56:00",
+    "duration_min": 718,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 9,
+        "price": {
+          "amount": 624.62,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 2,
+        "price": {
+          "amount": 972.55,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "bcd3e4d3-cee9-4769-aeca-bfc6d81d2685",
+    "airline": "American Airlines",
+    "flight_number": "UA386",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-05T12:29:00",
+    "arrival_utc": "2025-09-05T21:38:00",
+    "duration_min": 549,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 17,
+        "price": {
+          "amount": 509.56,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1947.88,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "4aa46ebe-337c-4771-93c7-fd0b169eb76b",
+    "airline": "Delta",
+    "flight_number": "UA382",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-15T07:54:00",
+    "arrival_utc": "2025-09-15T16:59:00",
+    "duration_min": 545,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 3,
+        "price": {
+          "amount": 790.46,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 2342.71,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "0604754b-26c4-47c9-b422-ac3dfaa6f1d7",
+    "airline": "British Airways",
+    "flight_number": "AA310",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-03T21:13:00",
+    "arrival_utc": "2025-09-04T08:41:00",
+    "duration_min": 688,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 598.57,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 2158.87,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "25740887-1119-41b1-bff0-256e355a54a7",
+    "airline": "Delta",
+    "flight_number": "DL234",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-11T04:50:00",
+    "arrival_utc": "2025-09-11T18:31:00",
+    "duration_min": 821,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 19,
+        "price": {
+          "amount": 301.42,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 2,
+        "price": {
+          "amount": 1764.34,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "e9f8625d-e85d-4b51-a494-ef69962a7307",
+    "airline": "United",
+    "flight_number": "UA896",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-11T00:11:00",
+    "arrival_utc": "2025-09-11T08:26:00",
+    "duration_min": 495,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 1,
+        "price": {
+          "amount": 363.38,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1081.84,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "d2de9a03-fc2f-4ffd-897d-5826b713b6ad",
+    "airline": "United",
+    "flight_number": "DL602",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-17T07:39:00",
+    "arrival_utc": "2025-09-17T14:01:00",
+    "duration_min": 382,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 16,
+        "price": {
+          "amount": 450.82,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 2497.74,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "4a9ce831-dfe6-4a4b-833d-ba499caeb8aa",
+    "airline": "United",
+    "flight_number": "AA719",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-11T19:09:00",
+    "arrival_utc": "2025-09-12T01:42:00",
+    "duration_min": 393,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 4,
+        "price": {
+          "amount": 437.51,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 2491.4,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "51d37197-b667-4d1c-9c24-162bab2db192",
+    "airline": "United",
+    "flight_number": "NH947",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-04T20:41:00",
+    "arrival_utc": "2025-09-05T10:10:00",
+    "duration_min": 809,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 17,
+        "price": {
+          "amount": 660.42,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 6,
+        "price": {
+          "amount": 1622.49,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "dc5b6d7a-0a7a-4bd5-a7c5-b561afb1b363",
+    "airline": "Delta",
+    "flight_number": "UA198",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-04T10:27:00",
+    "arrival_utc": "2025-09-04T19:07:00",
+    "duration_min": 520,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 8,
+        "price": {
+          "amount": 487.15,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 1007.41,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "overnight",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "220c1dfc-ddb4-4d2e-ab1c-a671ce5291ab",
+    "airline": "Delta",
+    "flight_number": "NH714",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-02T18:35:00",
+    "arrival_utc": "2025-09-03T05:22:00",
+    "duration_min": 647,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 10,
+        "price": {
+          "amount": 635.01,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 2297.77,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "2cb4e27a-dce4-45e9-b91e-e604ac301e3d",
+    "airline": "Delta",
+    "flight_number": "NH687",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-17T06:09:00",
+    "arrival_utc": "2025-09-17T17:45:00",
+    "duration_min": 696,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 15,
+        "price": {
+          "amount": 412.12,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 2252.6,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "2e1ea10d-9a4e-41cf-b4a8-0de08e58f27e",
+    "airline": "ANA",
+    "flight_number": "NH106",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-20T21:41:00",
+    "arrival_utc": "2025-09-21T08:26:00",
+    "duration_min": 645,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 0,
+        "price": {
+          "amount": 604.5,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 1188.67,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "e36e14cb-d41b-43dc-b01b-78db0d07f3d3",
+    "airline": "United",
+    "flight_number": "NH261",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-22T12:04:00",
+    "arrival_utc": "2025-09-22T19:16:00",
+    "duration_min": 432,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 785.91,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1244.21,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "popular"
+    ]
+  },
+  {
+    "flight_id": "fa0dd7af-41a5-45e4-8bbf-bfac2302fb10",
+    "airline": "United",
+    "flight_number": "AA552",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-25T18:38:00",
+    "arrival_utc": "2025-09-26T01:21:00",
+    "duration_min": 403,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 1,
+        "price": {
+          "amount": 377.79,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 1,
+        "price": {
+          "amount": 1335.36,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "53aafd8e-3d99-40f5-8847-f59d21c42a8e",
+    "airline": "British Airways",
+    "flight_number": "UA713",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-04T11:27:00",
+    "arrival_utc": "2025-09-04T18:23:00",
+    "duration_min": 416,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 9,
+        "price": {
+          "amount": 639.11,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1967.41,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "33843e30-ee5f-480c-88b4-00d54f94eee0",
+    "airline": "British Airways",
+    "flight_number": "BA489",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-10T06:49:00",
+    "arrival_utc": "2025-09-10T13:59:00",
+    "duration_min": 430,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 8,
+        "price": {
+          "amount": 444.72,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 0,
+        "price": {
+          "amount": 1695.82,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop",
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "31df3d96-d899-4d08-a9c8-9a98334bcf15",
+    "airline": "United",
+    "flight_number": "NH217",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-13T23:02:00",
+    "arrival_utc": "2025-09-14T08:45:00",
+    "duration_min": 583,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 0,
+        "price": {
+          "amount": 529.88,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1821.21,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "425ee110-a500-4036-ab4f-19c26e6f2d58",
+    "airline": "American Airlines",
+    "flight_number": "DL505",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-06T19:29:00",
+    "arrival_utc": "2025-09-07T08:34:00",
+    "duration_min": 785,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 11,
+        "price": {
+          "amount": 344.06,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 3,
+        "price": {
+          "amount": 1597.08,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "bb27599b-6fdd-4d8f-b8b8-109cfb3b23cd",
+    "airline": "British Airways",
+    "flight_number": "DL249",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-25T05:04:00",
+    "arrival_utc": "2025-09-25T15:25:00",
+    "duration_min": 621,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 357.01,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1461.76,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "fdd43cb3-20c0-45cc-bd90-658968c869b2",
+    "airline": "American Airlines",
+    "flight_number": "AA430",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "departure_utc": "2025-09-20T04:48:00",
+    "arrival_utc": "2025-09-20T17:16:00",
+    "duration_min": 748,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 20,
+        "price": {
+          "amount": 337.68,
+          "currency": "USD"
+        },
+        "refundable": false
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 2107.11,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "5c1cb427-5805-468c-8823-458201c79159",
+    "airline": "United",
+    "flight_number": "UA138",
+    "origin": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-03T15:28:00",
+    "arrival_utc": "2025-09-04T02:51:00",
+    "duration_min": 683,
+    "aircraft": "Boeing 787",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 9,
+        "price": {
+          "amount": 698.16,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1711.74,
+          "currency": "USD"
+        },
+        "refundable": false
+      }
+    ],
+    "tags": [
+      "overnight"
+    ]
+  },
+  {
+    "flight_id": "4b92915a-eec1-477e-bad5-5dc9cd9c4160",
+    "airline": "ANA",
+    "flight_number": "AA587",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-21T02:39:00",
+    "arrival_utc": "2025-09-21T13:43:00",
+    "duration_min": 664,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 16,
+        "price": {
+          "amount": 492.24,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 7,
+        "price": {
+          "amount": 2354.48,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": []
+  },
+  {
+    "flight_id": "b52b8453-417a-4ad0-a9a9-89d95510909b",
+    "airline": "British Airways",
+    "flight_number": "UA549",
+    "origin": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "destination": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "departure_utc": "2025-09-15T03:51:00",
+    "arrival_utc": "2025-09-15T17:31:00",
+    "duration_min": 820,
+    "aircraft": "Boeing 777",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 10,
+        "price": {
+          "amount": 791.19,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 8,
+        "price": {
+          "amount": 1933.8,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  },
+  {
+    "flight_id": "58011a02-836e-4c2f-9900-f78460af573e",
+    "airline": "American Airlines",
+    "flight_number": "UA390",
+    "origin": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "destination": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "departure_utc": "2025-09-12T09:24:00",
+    "arrival_utc": "2025-09-12T18:53:00",
+    "duration_min": 569,
+    "aircraft": "Airbus A350",
+    "class_fares": [
+      {
+        "class": "Economy",
+        "seats_left": 10,
+        "price": {
+          "amount": 639.45,
+          "currency": "USD"
+        },
+        "refundable": true
+      },
+      {
+        "class": "Business",
+        "seats_left": 5,
+        "price": {
+          "amount": 1005.46,
+          "currency": "USD"
+        },
+        "refundable": true
+      }
+    ],
+    "tags": [
+      "popular",
+      "nonstop"
+    ]
+  }
+]

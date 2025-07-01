@@ -1,0 +1,1222 @@
+[
+  {
+    "weather_id": "af4763e5-26ca-48e6-b868-94c1eab4fdcc",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-02",
+    "summary": "Sunny",
+    "temp_max_c": 26.0,
+    "temp_min_c": 15.0,
+    "precip_mm": 2.9,
+    "precip_prob": 56,
+    "humidity_pct": 60,
+    "wind_kph": 19.7,
+    "uvi": 7,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "b1860d99-02a7-4d54-8212-ce0c6a3da39f",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-03",
+    "summary": "Cloudy",
+    "temp_max_c": 23.7,
+    "temp_min_c": 15.7,
+    "precip_mm": 13.8,
+    "precip_prob": 94,
+    "humidity_pct": 86,
+    "wind_kph": 7.2,
+    "uvi": 3,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "ef781220-7f54-4938-86f6-4b40fbdc77d6",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-04",
+    "summary": "Cloudy",
+    "temp_max_c": 25.9,
+    "temp_min_c": 18.0,
+    "precip_mm": 7.2,
+    "precip_prob": 48,
+    "humidity_pct": 60,
+    "wind_kph": 38.5,
+    "uvi": 8,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "561237cf-021f-42c4-a713-4d74081af116",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-05",
+    "summary": "Light rain",
+    "temp_max_c": 25.6,
+    "temp_min_c": 14.8,
+    "precip_mm": 13.0,
+    "precip_prob": 87,
+    "humidity_pct": 81,
+    "wind_kph": 33.1,
+    "uvi": 5,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "72b4fbf6-49c8-474b-adae-edcc136a894d",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-07",
+    "summary": "Thunderstorm",
+    "temp_max_c": 20.7,
+    "temp_min_c": 10.5,
+    "precip_mm": 8.4,
+    "precip_prob": 28,
+    "humidity_pct": 59,
+    "wind_kph": 32.0,
+    "uvi": 4,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "7d11a417-a91d-4dc6-b3fb-8a057f89f221",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-08",
+    "summary": "Partly cloudy",
+    "temp_max_c": 24.8,
+    "temp_min_c": 12.8,
+    "precip_mm": 8.4,
+    "precip_prob": 92,
+    "humidity_pct": 57,
+    "wind_kph": 15.1,
+    "uvi": 10,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "a479fec4-bfc5-4e92-9a59-4a43b2a70ffe",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-09",
+    "summary": "Clear",
+    "temp_max_c": 23.3,
+    "temp_min_c": 17.8,
+    "precip_mm": 12.3,
+    "precip_prob": 98,
+    "humidity_pct": 49,
+    "wind_kph": 15.2,
+    "uvi": 5,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "52ddcb70-618a-47eb-8209-ad393e7273f1",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-10",
+    "summary": "Sunny",
+    "temp_max_c": 22.8,
+    "temp_min_c": 12.4,
+    "precip_mm": 3.8,
+    "precip_prob": 61,
+    "humidity_pct": 53,
+    "wind_kph": 12.1,
+    "uvi": 9,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "bb4e0297-a7dd-4335-b4c9-4741703e0ea9",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-11",
+    "summary": "Clear",
+    "temp_max_c": 27.7,
+    "temp_min_c": 9.4,
+    "precip_mm": 9.2,
+    "precip_prob": 75,
+    "humidity_pct": 55,
+    "wind_kph": 13.5,
+    "uvi": 11,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "d154d313-3286-4d8c-8010-c0d8de678f14",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-14",
+    "summary": "Cloudy",
+    "temp_max_c": 26.9,
+    "temp_min_c": 8.5,
+    "precip_mm": 6.2,
+    "precip_prob": 91,
+    "humidity_pct": 70,
+    "wind_kph": 8.5,
+    "uvi": 3,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "b3331e5e-20fc-49b7-b074-302e710c127d",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-15",
+    "summary": "Clear",
+    "temp_max_c": 31.7,
+    "temp_min_c": 9.6,
+    "precip_mm": 9.8,
+    "precip_prob": 60,
+    "humidity_pct": 70,
+    "wind_kph": 27.8,
+    "uvi": 5,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "072a6e52-2be4-4c84-9515-5975550c847c",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-16",
+    "summary": "Light rain",
+    "temp_max_c": 27.0,
+    "temp_min_c": 17.1,
+    "precip_mm": 1.3,
+    "precip_prob": 73,
+    "humidity_pct": 54,
+    "wind_kph": 23.7,
+    "uvi": 1,
+    "icon": "cloud"
+  },
+  {
+    "weather_id": "37042077-6328-4cdf-9ef3-ccc1e8ec2743",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-17",
+    "summary": "Thunderstorm",
+    "temp_max_c": 30.4,
+    "temp_min_c": 9.8,
+    "precip_mm": 13.8,
+    "precip_prob": 50,
+    "humidity_pct": 90,
+    "wind_kph": 22.3,
+    "uvi": 5,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "2076088b-7dc9-4071-94b4-47be6708e083",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-18",
+    "summary": "Sunny",
+    "temp_max_c": 22.2,
+    "temp_min_c": 14.0,
+    "precip_mm": 13.9,
+    "precip_prob": 42,
+    "humidity_pct": 58,
+    "wind_kph": 20.9,
+    "uvi": 11,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "011418d1-638b-45ed-a1b7-fc61c33dc094",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-20",
+    "summary": "Clear",
+    "temp_max_c": 24.9,
+    "temp_min_c": 17.4,
+    "precip_mm": 12.8,
+    "precip_prob": 59,
+    "humidity_pct": 57,
+    "wind_kph": 11.7,
+    "uvi": 2,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "220de59e-5fbc-489c-b6ec-5e5f6d8d96c2",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-21",
+    "summary": "Cloudy",
+    "temp_max_c": 28.2,
+    "temp_min_c": 14.5,
+    "precip_mm": 10.8,
+    "precip_prob": 1,
+    "humidity_pct": 87,
+    "wind_kph": 16.8,
+    "uvi": 5,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "f878c6db-fe06-45f9-bc9e-a884e321fb69",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-23",
+    "summary": "Partly cloudy",
+    "temp_max_c": 28.6,
+    "temp_min_c": 9.8,
+    "precip_mm": 12.8,
+    "precip_prob": 51,
+    "humidity_pct": 67,
+    "wind_kph": 23.0,
+    "uvi": 2,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "da9af60a-3ea6-4a3f-99a3-6adf148fe31b",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-26",
+    "summary": "Partly cloudy",
+    "temp_max_c": 19.3,
+    "temp_min_c": 17.8,
+    "precip_mm": 7.2,
+    "precip_prob": 31,
+    "humidity_pct": 40,
+    "wind_kph": 14.1,
+    "uvi": 4,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "ce75de7a-04a5-4cca-b93b-534ad86c96ec",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-27",
+    "summary": "Light rain",
+    "temp_max_c": 31.4,
+    "temp_min_c": 11.0,
+    "precip_mm": 10.8,
+    "precip_prob": 1,
+    "humidity_pct": 56,
+    "wind_kph": 27.9,
+    "uvi": 4,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "ac55c8e0-3fe0-4a52-b2cc-b66873add319",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-28",
+    "summary": "Partly cloudy",
+    "temp_max_c": 19.7,
+    "temp_min_c": 11.1,
+    "precip_mm": 6.1,
+    "precip_prob": 64,
+    "humidity_pct": 85,
+    "wind_kph": 31.9,
+    "uvi": 2,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "46b4c698-15a2-43fb-a1a4-dbfae6f53db7",
+    "location": {
+      "iata": "HND",
+      "city": "Tokyo",
+      "country": "JP",
+      "lat": 35.5494,
+      "lon": 139.7798
+    },
+    "date": "2025-09-30",
+    "summary": "Light rain",
+    "temp_max_c": 23.1,
+    "temp_min_c": 10.2,
+    "precip_mm": 14.4,
+    "precip_prob": 61,
+    "humidity_pct": 49,
+    "wind_kph": 20.9,
+    "uvi": 10,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "f2fa9d9c-2012-4dae-97d7-b723bce1aec1",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-01",
+    "summary": "Thunderstorm",
+    "temp_max_c": 27.8,
+    "temp_min_c": 17.1,
+    "precip_mm": 11.4,
+    "precip_prob": 85,
+    "humidity_pct": 53,
+    "wind_kph": 31.7,
+    "uvi": 11,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "5837d4a7-05ae-4080-b404-c8c2519cb3c8",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-03",
+    "summary": "Sunny",
+    "temp_max_c": 25.4,
+    "temp_min_c": 13.3,
+    "precip_mm": 5.4,
+    "precip_prob": 72,
+    "humidity_pct": 47,
+    "wind_kph": 7.2,
+    "uvi": 9,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "e124af23-df74-4a9a-939c-17d4318e2208",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-04",
+    "summary": "Cloudy",
+    "temp_max_c": 26.0,
+    "temp_min_c": 9.5,
+    "precip_mm": 4.9,
+    "precip_prob": 66,
+    "humidity_pct": 68,
+    "wind_kph": 9.1,
+    "uvi": 4,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "07161958-96b8-4a24-821e-3506f23e488f",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-05",
+    "summary": "Clear",
+    "temp_max_c": 24.8,
+    "temp_min_c": 17.0,
+    "precip_mm": 6.7,
+    "precip_prob": 7,
+    "humidity_pct": 69,
+    "wind_kph": 9.6,
+    "uvi": 7,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "bd519122-df36-47c6-abc9-d73d3ecdf667",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-06",
+    "summary": "Clear",
+    "temp_max_c": 18.8,
+    "temp_min_c": 12.6,
+    "precip_mm": 12.1,
+    "precip_prob": 92,
+    "humidity_pct": 41,
+    "wind_kph": 18.9,
+    "uvi": 1,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "f89a55aa-368d-4cde-9629-689b3ff22b7e",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-08",
+    "summary": "Cloudy",
+    "temp_max_c": 26.1,
+    "temp_min_c": 8.5,
+    "precip_mm": 5.2,
+    "precip_prob": 8,
+    "humidity_pct": 74,
+    "wind_kph": 39.8,
+    "uvi": 2,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "53c38a63-a382-4abc-b627-916cc3ca15fb",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-11",
+    "summary": "Sunny",
+    "temp_max_c": 22.0,
+    "temp_min_c": 9.8,
+    "precip_mm": 2.0,
+    "precip_prob": 82,
+    "humidity_pct": 86,
+    "wind_kph": 27.6,
+    "uvi": 7,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "fee9c187-8c0f-4f73-b793-6701250be7a2",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-12",
+    "summary": "Thunderstorm",
+    "temp_max_c": 24.3,
+    "temp_min_c": 17.2,
+    "precip_mm": 5.7,
+    "precip_prob": 10,
+    "humidity_pct": 83,
+    "wind_kph": 38.7,
+    "uvi": 9,
+    "icon": "cloud"
+  },
+  {
+    "weather_id": "376f51c4-231e-463c-b20e-82887df64b07",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-14",
+    "summary": "Partly cloudy",
+    "temp_max_c": 30.0,
+    "temp_min_c": 9.2,
+    "precip_mm": 14.9,
+    "precip_prob": 50,
+    "humidity_pct": 73,
+    "wind_kph": 9.5,
+    "uvi": 4,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "87a5ba83-f73c-42e2-9918-1275ac1c682f",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-15",
+    "summary": "Sunny",
+    "temp_max_c": 31.7,
+    "temp_min_c": 12.6,
+    "precip_mm": 10.8,
+    "precip_prob": 54,
+    "humidity_pct": 74,
+    "wind_kph": 18.3,
+    "uvi": 4,
+    "icon": "cloud"
+  },
+  {
+    "weather_id": "5c9e874a-99cc-4227-91a7-f12e2316e788",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-17",
+    "summary": "Thunderstorm",
+    "temp_max_c": 22.8,
+    "temp_min_c": 10.8,
+    "precip_mm": 14.1,
+    "precip_prob": 92,
+    "humidity_pct": 88,
+    "wind_kph": 8.9,
+    "uvi": 11,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "eb57b9ed-df98-41e4-bfc7-2e674d71faf1",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-18",
+    "summary": "Clear",
+    "temp_max_c": 28.7,
+    "temp_min_c": 16.8,
+    "precip_mm": 0.2,
+    "precip_prob": 26,
+    "humidity_pct": 44,
+    "wind_kph": 8.5,
+    "uvi": 1,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "a22c77a1-7676-4b37-bbb1-cb4b4b164a4d",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-19",
+    "summary": "Clear",
+    "temp_max_c": 27.4,
+    "temp_min_c": 16.7,
+    "precip_mm": 3.7,
+    "precip_prob": 5,
+    "humidity_pct": 65,
+    "wind_kph": 20.4,
+    "uvi": 9,
+    "icon": "cloud"
+  },
+  {
+    "weather_id": "06e71305-cca2-4d96-b284-35b9cf7778cf",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-20",
+    "summary": "Sunny",
+    "temp_max_c": 20.0,
+    "temp_min_c": 17.9,
+    "precip_mm": 3.5,
+    "precip_prob": 93,
+    "humidity_pct": 76,
+    "wind_kph": 16.2,
+    "uvi": 10,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "51f8ddb9-1870-4c2c-8f38-c4f313f70462",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-21",
+    "summary": "Light rain",
+    "temp_max_c": 21.3,
+    "temp_min_c": 16.8,
+    "precip_mm": 14.8,
+    "precip_prob": 66,
+    "humidity_pct": 54,
+    "wind_kph": 19.5,
+    "uvi": 5,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "0392b3a4-38d7-4375-87fb-ebd93316b304",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-22",
+    "summary": "Clear",
+    "temp_max_c": 31.3,
+    "temp_min_c": 16.8,
+    "precip_mm": 13.7,
+    "precip_prob": 80,
+    "humidity_pct": 83,
+    "wind_kph": 20.0,
+    "uvi": 8,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "93e4a613-9eb2-4079-b90c-2bd0d6d39856",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-26",
+    "summary": "Light rain",
+    "temp_max_c": 31.2,
+    "temp_min_c": 14.7,
+    "precip_mm": 11.8,
+    "precip_prob": 40,
+    "humidity_pct": 84,
+    "wind_kph": 19.6,
+    "uvi": 3,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "dbad97bf-d022-4f11-bfee-fde3d4994abf",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-27",
+    "summary": "Thunderstorm",
+    "temp_max_c": 20.6,
+    "temp_min_c": 13.4,
+    "precip_mm": 3.6,
+    "precip_prob": 28,
+    "humidity_pct": 59,
+    "wind_kph": 35.0,
+    "uvi": 3,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "405edd48-b934-41c2-a59d-8d6b0cc9d887",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-09-28",
+    "summary": "Sunny",
+    "temp_max_c": 25.9,
+    "temp_min_c": 17.7,
+    "precip_mm": 8.4,
+    "precip_prob": 17,
+    "humidity_pct": 64,
+    "wind_kph": 13.5,
+    "uvi": 4,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "d13842aa-d6bc-4886-bf89-93ac06426cde",
+    "location": {
+      "iata": "LHR",
+      "city": "London",
+      "country": "GB",
+      "lat": 51.47,
+      "lon": -0.4543
+    },
+    "date": "2025-10-01",
+    "summary": "Partly cloudy",
+    "temp_max_c": 19.1,
+    "temp_min_c": 12.5,
+    "precip_mm": 5.6,
+    "precip_prob": 68,
+    "humidity_pct": 86,
+    "wind_kph": 34.0,
+    "uvi": 1,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "c5a96e49-7ee4-4f8e-8842-7e52b1cc9930",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-02",
+    "summary": "Thunderstorm",
+    "temp_max_c": 27.4,
+    "temp_min_c": 14.0,
+    "precip_mm": 13.1,
+    "precip_prob": 24,
+    "humidity_pct": 88,
+    "wind_kph": 25.6,
+    "uvi": 11,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "635d1e0b-e40c-4b45-ac1e-78e1b2d89a5f",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-04",
+    "summary": "Cloudy",
+    "temp_max_c": 24.7,
+    "temp_min_c": 16.7,
+    "precip_mm": 5.0,
+    "precip_prob": 1,
+    "humidity_pct": 53,
+    "wind_kph": 37.8,
+    "uvi": 2,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "45981b5b-06f1-4389-8f37-6d99e52470b7",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-05",
+    "summary": "Thunderstorm",
+    "temp_max_c": 30.8,
+    "temp_min_c": 15.0,
+    "precip_mm": 10.6,
+    "precip_prob": 50,
+    "humidity_pct": 55,
+    "wind_kph": 24.3,
+    "uvi": 5,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "dcb50dd8-2cc5-4282-b868-91e453ca1eef",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-06",
+    "summary": "Thunderstorm",
+    "temp_max_c": 25.5,
+    "temp_min_c": 11.6,
+    "precip_mm": 3.9,
+    "precip_prob": 65,
+    "humidity_pct": 71,
+    "wind_kph": 21.3,
+    "uvi": 8,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "f7d1d97f-bc6c-4406-bd31-88e959cd9437",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-07",
+    "summary": "Cloudy",
+    "temp_max_c": 23.2,
+    "temp_min_c": 12.1,
+    "precip_mm": 8.4,
+    "precip_prob": 28,
+    "humidity_pct": 87,
+    "wind_kph": 10.1,
+    "uvi": 5,
+    "icon": "clear"
+  },
+  {
+    "weather_id": "7db43c8b-accb-4649-b7d5-3954a2710eda",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-08",
+    "summary": "Clear",
+    "temp_max_c": 26.1,
+    "temp_min_c": 12.2,
+    "precip_mm": 2.3,
+    "precip_prob": 42,
+    "humidity_pct": 54,
+    "wind_kph": 18.3,
+    "uvi": 4,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "07cda7c5-ddac-446f-8eec-501388a1cbac",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-09",
+    "summary": "Clear",
+    "temp_max_c": 27.2,
+    "temp_min_c": 14.8,
+    "precip_mm": 3.9,
+    "precip_prob": 62,
+    "humidity_pct": 86,
+    "wind_kph": 27.5,
+    "uvi": 8,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "fee91a5d-ca0a-45c8-b5d4-695471712de2",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-12",
+    "summary": "Cloudy",
+    "temp_max_c": 28.3,
+    "temp_min_c": 11.5,
+    "precip_mm": 2.1,
+    "precip_prob": 69,
+    "humidity_pct": 71,
+    "wind_kph": 11.4,
+    "uvi": 9,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "cc4ee88e-7fa3-46d6-af49-12db25dd2a6d",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-15",
+    "summary": "Sunny",
+    "temp_max_c": 25.3,
+    "temp_min_c": 16.4,
+    "precip_mm": 1.1,
+    "precip_prob": 85,
+    "humidity_pct": 43,
+    "wind_kph": 31.8,
+    "uvi": 7,
+    "icon": "cloud"
+  },
+  {
+    "weather_id": "42c13275-e1b3-4754-b57b-db4977139c48",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-16",
+    "summary": "Partly cloudy",
+    "temp_max_c": 21.2,
+    "temp_min_c": 15.1,
+    "precip_mm": 0.1,
+    "precip_prob": 64,
+    "humidity_pct": 69,
+    "wind_kph": 18.1,
+    "uvi": 10,
+    "icon": "partly"
+  },
+  {
+    "weather_id": "5c8145a3-3b08-4515-90eb-dbb6a480f5c4",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-17",
+    "summary": "Partly cloudy",
+    "temp_max_c": 31.1,
+    "temp_min_c": 17.1,
+    "precip_mm": 9.9,
+    "precip_prob": 2,
+    "humidity_pct": 40,
+    "wind_kph": 23.6,
+    "uvi": 7,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "abb0a272-f5d8-4e55-9bd1-28558fe43a73",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-18",
+    "summary": "Sunny",
+    "temp_max_c": 25.4,
+    "temp_min_c": 10.7,
+    "precip_mm": 14.7,
+    "precip_prob": 2,
+    "humidity_pct": 72,
+    "wind_kph": 33.5,
+    "uvi": 11,
+    "icon": "storm"
+  },
+  {
+    "weather_id": "61ca3c6b-7e8a-4940-8af7-b2c3f55f4283",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-19",
+    "summary": "Cloudy",
+    "temp_max_c": 19.5,
+    "temp_min_c": 9.0,
+    "precip_mm": 2.2,
+    "precip_prob": 24,
+    "humidity_pct": 79,
+    "wind_kph": 23.4,
+    "uvi": 6,
+    "icon": "rain"
+  },
+  {
+    "weather_id": "036fc4aa-e56d-4f82-b280-a6435665d571",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-20",
+    "summary": "Thunderstorm",
+    "temp_max_c": 19.1,
+    "temp_min_c": 17.6,
+    "precip_mm": 6.9,
+    "precip_prob": 31,
+    "humidity_pct": 84,
+    "wind_kph": 12.9,
+    "uvi": 11,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "a290065c-4194-4677-a208-303e4c6a8406",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-23",
+    "summary": "Partly cloudy",
+    "temp_max_c": 31.9,
+    "temp_min_c": 14.5,
+    "precip_mm": 0.5,
+    "precip_prob": 51,
+    "humidity_pct": 64,
+    "wind_kph": 18.2,
+    "uvi": 8,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "dab9b147-7959-4557-b6dd-5d72c0f55efa",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-24",
+    "summary": "Partly cloudy",
+    "temp_max_c": 18.1,
+    "temp_min_c": 9.7,
+    "precip_mm": 7.5,
+    "precip_prob": 55,
+    "humidity_pct": 81,
+    "wind_kph": 32.5,
+    "uvi": 10,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "713f0f18-94fb-4220-bd01-67d72720ebb7",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-25",
+    "summary": "Clear",
+    "temp_max_c": 30.9,
+    "temp_min_c": 10.3,
+    "precip_mm": 13.5,
+    "precip_prob": 88,
+    "humidity_pct": 76,
+    "wind_kph": 21.6,
+    "uvi": 1,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "3890b78e-21c3-4542-8455-10c341d216e3",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-26",
+    "summary": "Partly cloudy",
+    "temp_max_c": 31.0,
+    "temp_min_c": 17.0,
+    "precip_mm": 8.5,
+    "precip_prob": 4,
+    "humidity_pct": 51,
+    "wind_kph": 37.5,
+    "uvi": 6,
+    "icon": "sun"
+  },
+  {
+    "weather_id": "54f3c2a5-6e95-49ad-8208-ea6b4ed65e7f",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-09-27",
+    "summary": "Cloudy",
+    "temp_max_c": 26.2,
+    "temp_min_c": 15.5,
+    "precip_mm": 10.7,
+    "precip_prob": 50,
+    "humidity_pct": 44,
+    "wind_kph": 15.5,
+    "uvi": 10,
+    "icon": "cloud"
+  },
+  {
+    "weather_id": "fc7e2cf7-5245-4656-9fa6-5c10ca11b0f0",
+    "location": {
+      "iata": "JFK",
+      "city": "New York",
+      "country": "US",
+      "lat": 40.6413,
+      "lon": -73.7781
+    },
+    "date": "2025-10-01",
+    "summary": "Clear",
+    "temp_max_c": 29.7,
+    "temp_min_c": 11.9,
+    "precip_mm": 13.4,
+    "precip_prob": 42,
+    "humidity_pct": 64,
+    "wind_kph": 31.4,
+    "uvi": 3,
+    "icon": "partly"
+  }
+]

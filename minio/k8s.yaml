@@ -1,0 +1,141 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minio-deployment
+  namespace: smart-travel-agency # Assuming this namespace exists
+  labels:
+    app: minio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minio
+  template:
+    metadata:
+      labels:
+        app: minio
+    spec:
+      # --- Recommended for hostPath in multi-node clusters ---
+      # nodeSelector:
+      #   minio-datanode: "true" # Add label 'minio-datanode=true' to the target node
+      containers:
+      - name: minio
+        # --- Recommended: Use a specific version tag instead of latest ---
+        image: quay.io/minio/minio:latest # Example stable version
+        # --- Overwrite command and args to run the setup script ---
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            set -e # Exit on error
+
+            ACCESS_KEY="${MINIO_ACCESS_KEY:-minioadmin}"
+            SECRET_KEY="${MINIO_SECRET_KEY:-minioadmin}"
+
+            echo "Starting MinIO server..."
+            minio server /data --console-address :3090 &
+
+            echo "Waiting for MinIO server to become ready..."
+            ATTEMPTS=0
+            MAX_ATTEMPTS=30
+            until curl -sf http://localhost:9000/minio/health/ready; do
+              ATTEMPTS=$((ATTEMPTS + 1))
+              if [ $ATTEMPTS -ge $MAX_ATTEMPTS ]; then
+                echo "MinIO server failed to start listening on port 9000 after $MAX_ATTEMPTS attempts."
+                exit 1
+              fi
+              echo "MinIO not ready yet (attempt $ATTEMPTS/$MAX_ATTEMPTS), waiting 2 seconds..."
+              sleep 2
+            done
+            echo "MinIO server is ready."
+
+            echo "Configuring mc alias..."
+            mc alias set local http://localhost:9000 ${ACCESS_KEY} ${SECRET_KEY} --api s3v4
+
+            BUCKET_NAME="aigw"
+            echo "Checking/Creating bucket '${BUCKET_NAME}'..."
+            if ! mc ls local/${BUCKET_NAME} > /dev/null 2>&1; then
+              mc mb local/${BUCKET_NAME}
+              echo "Bucket '${BUCKET_NAME}' created."
+            else
+              echo "Bucket '${BUCKET_NAME}' already exists."
+            fi
+
+            # --- Apply anonymous read/write policy using the newer mc command ---
+            # 'public' corresponds to read/write access for the entire bucket (prefix /)
+            # SECURITY WARNING: Allows anyone to read/write objects.
+            echo "Applying anonymous 'public' (read/write) policy to bucket '${BUCKET_NAME}'..."
+            mc anonymous set public local/${BUCKET_NAME}
+
+            echo "MinIO setup complete. Bringing server process to foreground."
+            wait
+        env:
+        # --- WARNING: Use Secrets for production credentials ---
+        - name: MINIO_ACCESS_KEY
+          value: "minioadmin"   # Change to a secure value or use secretKeyRef
+        - name: MINIO_SECRET_KEY
+          value: "minioadmin"   # Change to a secure value or use secretKeyRef
+        ports:
+        - containerPort: 9000  # API Port
+          name: api
+        - containerPort: 3090  # Console Port (as per your original args)
+          name: console
+        volumeMounts:
+        # --- Corrected volumeMount name to match volume definition ---
+        - name: minio-storage # Mount name should match the volume name below
+          mountPath: /data    # Standard MinIO data path in container
+        # --- Recommended: Add Probes ---
+        livenessProbe:
+          httpGet:
+            path: /minio/health/live # API port
+            port: 9000
+          initialDelaySeconds: 45 # Allow extra time for script execution
+          periodSeconds: 20
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /minio/health/ready # API port
+            port: 9000
+          initialDelaySeconds: 10 # Check sooner after startup attempt
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+      volumes:
+      - name: minio-storage # This name should match the volumeMounts.name above
+        hostPath:
+          path: /mnt/minio-data # Path on the node
+          type: DirectoryOrCreate # Ensures directory exists or is created
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-data
+  namespace: smart-travel-agency
+  labels:
+    app: minio
+spec:
+  type: ClusterIP
+  selector:
+    app: minio
+  ports:
+  - protocol: TCP
+    port: 9000
+    targetPort: 9000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-ui
+  namespace: smart-travel-agency
+  labels:
+    app: minio
+spec:
+  type: NodePort
+  selector:
+    app: minio
+  ports:
+  - protocol: TCP
+    port: 3090
+    targetPort: 3090
+    nodePort: 30090   # Adjust this value if necessary
+
