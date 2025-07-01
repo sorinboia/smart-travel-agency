@@ -45,7 +45,7 @@ spec:
       volumes:
         - name: mongo-data
           hostPath:
-            path: /mnt/sta-mongo
+            path: /mnt/sta-mongo-auth
             type: DirectoryOrCreate
 ---
 apiVersion: v1
@@ -104,7 +104,7 @@ spec:
       containers:
         - name: mongo-seed
           image: mongo:6
-          command: ["mongo", "mongodb://staadmin:staadminpw@mongodb:27017/sta", "/seed/init.js"]
+          command: ["mongosh", "mongodb://admin:admin@mongodb:27017/sta?authSource=admin", "/seed/init.js"]         
           volumeMounts:
             - name: seed-js
               mountPath: /seed
