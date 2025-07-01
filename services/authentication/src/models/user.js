@@ -39,3 +39,17 @@ export function sanitizeUser(user) {
   const { _id, email, fullName, createdAt, status } = user;
   return { userId: _id, email, fullName, createdAt, status };
 }
+
+// JSON-Schema for user response (shared by routes)
+export const userResponseSchema = {
+  type: 'object',
+  properties: {
+    userId: { type: 'string' },
+    email: { type: 'string', format: 'email' },
+    fullName: { type: 'string' },
+    createdAt: { type: 'string', format: 'date-time' },
+    status: { type: 'string' }
+  },
+  required: ['userId', 'email', 'fullName', 'createdAt', 'status'],
+  additionalProperties: false
+};

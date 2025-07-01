@@ -1,6 +1,6 @@
 // Current user profile route for /auth/me
 
-import { sanitizeUser } from '../models/user.js';
+import { sanitizeUser, userResponseSchema } from '../models/user.js';
 
 export default async function meRoutes(fastify, opts) {
   fastify.get('/me', {
@@ -10,7 +10,7 @@ export default async function meRoutes(fastify, opts) {
         200: {
           type: 'object',
           properties: {
-            user: { type: 'object' }
+            user: userResponseSchema
           }
         },
         401: {

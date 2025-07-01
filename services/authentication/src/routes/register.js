@@ -1,6 +1,6 @@
 // Registration route for /auth/register
 
-import { userRegisterSchema, sanitizeUser } from '../models/user.js';
+import { userRegisterSchema, sanitizeUser, userResponseSchema } from '../models/user.js';
 import { hashPassword } from '../utils/password.js';
 
 export default async function registerRoutes(fastify, opts) {
@@ -11,7 +11,7 @@ export default async function registerRoutes(fastify, opts) {
         201: {
           type: 'object',
           properties: {
-            user: { type: 'object' },
+            user: userResponseSchema,
             token: { type: 'string' },
             expiresAt: { type: 'string', format: 'date-time' }
           }
