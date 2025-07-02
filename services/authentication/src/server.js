@@ -14,15 +14,11 @@ import meRoutes from './routes/me.js';
 
 import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod';
 
-// Set Zod compilers after Fastify instance is created
-fastify.setValidatorCompiler(validatorCompiler);
-fastify.setSerializerCompiler(serializerCompiler);
-
 const fastify = Fastify({
   logger: pino({ level: process.env.LOG_LEVEL || 'info' })
 });
 
-// Register plugins
+ // Register plugins
 await fastify.register(mongoPlugin, mongoConfig);
 await fastify.register(jwtPlugin, jwtConfig);
 await fastify.register(authenticatePlugin);
