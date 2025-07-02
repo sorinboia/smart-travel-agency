@@ -15,9 +15,7 @@
     "@fastify/mongodb": "^6.0.0",
     "bcryptjs": "^2.4.3",
     "fastify": "^4.27.2",
-    "fastify-type-provider-zod": "^4.0.2",
-    "pino": "^8.17.0",
-    "zod": "^3.22.4"
+    "pino": "^8.17.0"
   },
   "devDependencies": {
     "eslint": "^8.56.0",

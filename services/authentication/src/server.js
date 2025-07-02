@@ -12,7 +12,6 @@ import registerRoutes from './routes/register.js';
 import loginRoutes from './routes/login.js';
 import meRoutes from './routes/me.js';
 
-import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod';
 
 const fastify = Fastify({
   logger: pino({ level: process.env.LOG_LEVEL || 'info' })

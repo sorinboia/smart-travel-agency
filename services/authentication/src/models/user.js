@@ -1,19 +1,5 @@
 // User schema validation using Zod and JSON-Schema
 
-import { z } from 'zod';
-
-// Zod schemas (for internal use)
-export const userRegisterSchemaZ = z.object({
-  email: z.string().email(),
-  password: z.string().min(8),
-  fullName: z.string().min(1)
-});
-
-export const userLoginSchemaZ = z.object({
-  email: z.string().email(),
-  password: z.string()
-});
-
 // JSON-Schema for Fastify validation
 export const userRegisterSchema = {
   type: 'object',
