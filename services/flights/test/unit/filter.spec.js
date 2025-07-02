@@ -1,4 +1,6 @@
-const { search } = require('../../src/models/flightCatalogue.js');
+// ESM version of flight search filter tests
+
+import { search, __setTestFlights__ } from '../../src/models/flightCatalogue.js';
 
 describe('Flight search filtering', () => {
   const flights = [
@@ -28,10 +30,7 @@ describe('Flight search filtering', () => {
 
   beforeAll(() => {
     // Patch the in-memory flights for testing
-    // Patch the in-memory flights for testing
-    // Instead of mocking search, patch the flights array directly
-    const fc = require('../../src/models/flightCatalogue.js');
-    fc.__setTestFlights__(flights);
+    __setTestFlights__(flights);
   });
 
   it('filters by origin and destination', () => {
