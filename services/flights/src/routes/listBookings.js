@@ -1,6 +1,6 @@
-const { listBookings } = require('../models/booking.js');
+import { listBookings } from '../models/booking.js';
 
-module.exports = function (fastify, opts, done) {
+export default async function listBookingsRoutes(fastify, opts) {
   fastify.get('/bookings', async (req, reply) => {
     const userId = req.user?.sub || req.user?.id;
     const { status, page, limit } = req.query;
@@ -11,5 +11,4 @@ module.exports = function (fastify, opts, done) {
     });
     reply.send({ bookings });
   });
-  done();
-};
+}

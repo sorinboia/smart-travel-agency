@@ -1,3 +1,4 @@
+import 'dotenv/config';
 // Fastify server bootstrap for STA Flights Service
 
 import Fastify from 'fastify';

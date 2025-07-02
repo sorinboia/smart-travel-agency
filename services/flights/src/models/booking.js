@@ -1,9 +1,9 @@
-const { ObjectId } = require('mongodb');
+import { ObjectId } from 'mongodb';
 
 /**
  * Create a booking with seat decrement in a transaction.
  */
-async function createBooking(fastify, userId, { flightId, class: fareClass }) {
+export async function createBooking(fastify, userId, { flightId, class: fareClass }) {
   const client = fastify.mongo.client;
   const db = fastify.mongo.db;
   const bookings = db.collection('bookings');
@@ -104,7 +104,7 @@ async function createBooking(fastify, userId, { flightId, class: fareClass }) {
 /**
  * List bookings for a user.
  */
-async function listBookings(fastify, userId, { status, page = 1, limit = 20 } = {}) {
+export async function listBookings(fastify, userId, { status, page = 1, limit = 20 } = {}) {
   const bookings = fastify.mongo.db.collection('bookings');
   const query = { userId };
   if (status) query.status = status;
@@ -115,7 +115,7 @@ async function listBookings(fastify, userId, { status, page = 1, limit = 20 } = 
 /**
  * Cancel a booking and restore seat.
  */
-async function cancelBooking(fastify, userId, bookingId) {
+export async function cancelBooking(fastify, userId, bookingId) {
   const client = fastify.mongo.client;
   const db = fastify.mongo.db;
   const bookings = db.collection('bookings');
@@ -203,9 +203,3 @@ async function cancelBooking(fastify, userId, bookingId) {
     }
   }
 }
-
-module.exports = {
-  createBooking,
-  listBookings,
-  cancelBooking
-};

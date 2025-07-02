@@ -1,6 +1,6 @@
-const { findById } = require('../models/flightCatalogue.js');
+import { findById } from '../models/flightCatalogue.js';
 
-module.exports = function (fastify, opts, done) {
+export default async function detailsRoutes(fastify, opts) {
   fastify.get('/flights/:flightId', async (req, reply) => {
     const { flightId } = req.params;
     const flight = findById(flightId);
@@ -9,5 +9,4 @@ module.exports = function (fastify, opts, done) {
     }
     reply.send(flight);
   });
-  done();
-};
+}

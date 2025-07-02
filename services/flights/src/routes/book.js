@@ -1,6 +1,6 @@
-const { createBooking } = require('../models/booking.js');
+import { createBooking } from '../models/booking.js';
 
-module.exports = function (fastify, opts, done) {
+export default async function bookRoutes(fastify, opts) {
   fastify.post('/bookings', async (req, reply) => {
     const userId = req.user?.sub || req.user?.id;
     const { flightId, class: fareClass } = req.body;
@@ -18,5 +18,4 @@ module.exports = function (fastify, opts, done) {
       }
     }
   });
-  done();
-};
+}

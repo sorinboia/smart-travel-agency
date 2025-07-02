@@ -1,6 +1,6 @@
-const { cancelBooking } = require('../models/booking.js');
+import { cancelBooking } from '../models/booking.js';
 
-module.exports = function (fastify, opts, done) {
+export default async function cancelRoutes(fastify, opts) {
   fastify.delete('/bookings/:bookingId', async (req, reply) => {
     const userId = req.user?.sub || req.user?.id;
     const { bookingId } = req.params;
@@ -15,5 +15,4 @@ module.exports = function (fastify, opts, done) {
       }
     }
   });
-  done();
-};
+}

@@ -1,10 +1,10 @@
-const { promisify } = require('util');
+import { promisify } from 'util';
 
 // In-memory flight catalogue
 let flights = [];
 
 // For test patching
-function __setTestFlights__(arr) {
+export function __setTestFlights__(arr) {
   flights = arr;
 }
 
@@ -50,10 +50,10 @@ const testFixture = [
  * @param {FastifyInstance} fastify
  * @returns {Promise<void>}
  */
-async function loadCatalogue(fastify) {
+export async function loadCatalogue(fastify) {
   const minio = fastify.minio;
   const bucket = process.env.MINIO_BUCKET || 'flights';
-  const object = 'flights.json';
+  const object = process.env.MINIO_OBJECT || 'flights.json';
 
   const getObject = promisify(minio.getObject.bind(minio));
   const stream = await getObject(bucket, object);
@@ -70,7 +70,7 @@ async function loadCatalogue(fastify) {
  * @param {Object} filters
  * @returns {Array}
  */
-function search(filters) {
+export function search(filters) {
   // If running under Jest and flights is empty, use test fixture
   if (
     (process.env.NODE_ENV === 'test' || process.env.JEST_WORKER_ID) &&
@@ -123,7 +123,7 @@ function filterFlights(flightsArr, filters) {
  * @param {string} id
  * @returns {Object|null}
  */
-function findById(id) {
+export function findById(id) {
   // If running under Jest and flights is empty, use test fixture
   if (
     (process.env.NODE_ENV === 'test' || process.env.JEST_WORKER_ID) &&
@@ -133,10 +133,3 @@ function findById(id) {
   }
   return flights.find(f => f.flight_id === id) || null;
 }
-
-module.exports = {
-  loadCatalogue,
-  search,
-  findById,
-  __setTestFlights__
-};

@@ -1,10 +1,12 @@
-const fp = require('fastify-plugin');
-const { Client } = require('minio');
+import fp from 'fastify-plugin';
+import { Client } from 'minio';
 
-module.exports = fp(async (fastify) => {
+export default fp(async (fastify) => {
   const client = new Client({
-    endPoint: (process.env.MINIO_ENDPOINT || 'minio').replace(/^https?:\/\//, ''),
-    port: 9000,
+    endPoint: (process.env.MINIO_ENDPOINT || 'minio')
+      .replace(/^https?:\/\//, '')
+      .replace(/:\d+$/, ''), // Remove :port if present
+    port: parseInt(process.env.MINIO_PORT, 10) || 9000,
     useSSL: false,
     accessKey: process.env.MINIO_ACCESS_KEY || 'minio',
     secretKey: process.env.MINIO_SECRET_KEY || 'minio123'
