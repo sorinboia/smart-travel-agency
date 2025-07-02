@@ -1,0 +1,27 @@
+{
+  "name": "sta-flights-service",
+  "version": "1.0.0",
+  "description": "Smart Travel Agency - Flights Service",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "fastify": "^4",
+    "@fastify/jwt": "^7",
+    "@fastify/mongodb": "^6",
+    "minio": "^8",
+    "pino": "^8"
+  },
+  "devDependencies": {
+    "jest": "^30",
+    "mongodb-memory-server": "^9",
+    "supertest": "^6"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

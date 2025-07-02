@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sta-flights-service
+  namespace: smart-travel-agency
+  labels:
+    app: sta-flights-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sta-flights-service
+  template:
+    metadata:
+      labels:
+        app: sta-flights-service
+    spec:
+      containers:
+        - name: sta-flights-service
+          image: sta-flights-service:latest
+          ports:
+            - containerPort: 4002
+          env:
+            - name: PORT
+              value: "4002"
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: sta-mongo-secret
+                  key: uri
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: sta-jwt-secret
+                  key: secret
+            - name: MINIO_ENDPOINT
+              value: "http://minio:9000"
+            - name: MINIO_ACCESS_KEY
+              value: "minio"
+            - name: MINIO_SECRET_KEY
+              value: "minio123"
+            - name: LOG_LEVEL
+              value: "info"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 4002
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 4002
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sta-flights-service
+  namespace: smart-travel-agency
+  labels:
+    app: sta-flights-service
+spec:
+  type: ClusterIP
+  selector:
+    app: sta-flights-service
+  ports:
+    - protocol: TCP
+      port: 4002
+      targetPort: 4002
