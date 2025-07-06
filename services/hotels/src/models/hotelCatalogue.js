@@ -21,7 +21,11 @@ export async function loadCatalogue(fastify) {
   for await (const chunk of stream) {
     data += chunk.toString();
   }
-  catalogue = JSON.parse(data);
+  // Map hotel_id to id for compatibility with findById and filters
+  catalogue = JSON.parse(data).map(hotel => ({
+    ...hotel,
+    id: hotel.hotel_id || hotel.id
+  }));
 }
 
 /**
@@ -47,8 +51,14 @@ export function findById(id) {
  */
 function filterHotels(hotelsArr, filters) {
   return hotelsArr.filter(hotel => {
-    if (filters.city && hotel.city !== filters.city) return false;
-    if (filters.country && hotel.country !== filters.country) return false;
+    if (filters.city) {
+      const hotelCity = hotel.address?.city || hotel.city;
+      if (!hotelCity || hotelCity.toLowerCase() !== filters.city.toLowerCase()) return false;
+    }
+    if (filters.country) {
+      const hotelCountry = hotel.address?.country || hotel.country;
+      if (!hotelCountry || hotelCountry.toLowerCase() !== filters.country.toLowerCase()) return false;
+    }
     if (filters.guests && hotel.maxGuests < filters.guests) return false;
     if (filters.amenities) {
       const required = Array.isArray(filters.amenities) ? filters.amenities : [filters.amenities];

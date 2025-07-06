@@ -11,17 +11,7 @@ import jwtConfig from './plugins/jwt.js';
 import mongoConfig from './plugins/mongodb.js';
 import minioPlugin from './plugins/minio.js';
 
-// Placeholder for authenticatePlugin (to be implemented)
-import fp from 'fastify-plugin';
-const authenticatePlugin = fp(async (fastify) => {
-  fastify.addHook('onRequest', async (req, reply) => {
-    try {
-      await req.jwtVerify();
-    } catch (err) {
-      reply.code(401).send({ error: 'Unauthorized' });
-    }
-  });
-});
+import authenticatePlugin from './plugins/authenticate.js';
 
 import { loadCatalogue } from './models/hotelCatalogue.js';
 import searchRoutes from './routes/search.js';
