@@ -104,7 +104,7 @@ function filterFlights(flightsArr, filters) {
   }
   if (filters.class) {
     results = results.filter(f =>
-      f.class_fares.some(cf => cf.class === filters.class && cf.seats_left > 0)
+      f.class_fares.some(cf => cf.class === filters.class)
     );
   }
   // Sort by cheapest fare, then duration

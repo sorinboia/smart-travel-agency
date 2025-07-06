@@ -56,16 +56,6 @@ beforeAll(async () => {
   await fastify.register(listBookingsRoutes);
   await fastify.register(cancelRoutes);
 
-  // Insert inventory for booking tests
-  await fastify.ready();
-  const inventory = fastify.mongo.db.collection('inventory');
-  await inventory.deleteMany({}); // Ensure clean state
-  await inventory.insertOne({
-    flight_id: 'flight-1',
-    class: 'Economy',
-    seats_left: 2
-  });
-
   // Generate JWT
   jwtToken = fastify.jwt.sign({ sub: 'user1', email: 'user1@example.com' });
 });
@@ -93,22 +83,11 @@ describe('Flights API', () => {
   });
 
   it('books a flight (POST /bookings)', async () => {
-    // Insert inventory for flight-1 before booking
-    await fastify.mongo.db.collection('inventory').updateOne(
-      { flight_id: 'flight-1', class: 'Economy' },
-      { $set: { seats_left: 2 } },
-      { upsert: true }
-    );
     const res = await supertest(fastify.server)
       .post('/bookings')
       .set('Authorization', `Bearer ${jwtToken}`)
       .send({ flightId: 'flight-1', class: 'Economy' })
       .expect(201);
-    // If booking fails, print error for debugging
-    if (res.status !== 201) {
-      // eslint-disable-next-line no-console
-      console.error('Booking error:', res.body);
-    }
     expect(res.body.flightId).toBe('flight-1');
     expect(res.body.class).toBe('Economy');
     expect(res.body.status).toBe('active');

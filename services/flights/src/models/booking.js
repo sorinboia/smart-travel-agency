@@ -5,154 +5,26 @@ import { findById as findFlightById } from './flightCatalogue.js';
  * Create a booking with seat decrement in a transaction.
  */
 export async function createBooking(fastify, userId, { flightId, class: fareClass }) {
-  const client = fastify.mongo.client;
   const db = fastify.mongo.db;
-  const bookings = db.collection('bookings');
-  const inventory = db.collection('inventory');
+  const bookings = db.collection('flight_bookings');
 
-  // Helper: Seed inventory for a flight/class if missing, using catalogue
-  async function seedInventoryIfMissing({ flightId, fareClass, session }) {
-    const flight = findFlightById(flightId);
-    if (!flight) return false;
-    const classInfo = flight.class_fares.find(cf => cf.class === fareClass);
-    if (!classInfo || classInfo.seats_left <= 0) return false;
-    // Insert with seats_left - 1 (consume 1 for this booking)
-    await inventory.insertOne(
-      {
-        flight_id: flightId,
-        class: fareClass,
-        seats_left: classInfo.seats_left - 1
-      },
-      session ? { session } : undefined
-    );
-    return true;
-  }
-
-  let bookingDoc;
-  let attempt = 0;
-  while (attempt < 3) {
-    attempt++;
-    const session = client.startSession();
-    try {
-      // Detect if transactions are supported (mongodb-memory-server is standalone, not replica set)
-      let transactionSupported = true;
-      try {
-        // This will throw if not supported
-        await session.withTransaction(async () => {});
-      } catch (e) {
-        // Only treat as unsupported if error is code 20 (IllegalOperation)
-        if (e && e.code === 20) {
-          transactionSupported = false;
-        } else {
-          throw e;
-        }
-      }
-
-      if (transactionSupported) {
-        try {
-          await session.withTransaction(async () => {
-            // Decrement seat
-            let invRes = await inventory.updateOne(
-              { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
-              { $inc: { seats_left: -1 } },
-              { session }
-            );
-            if (invRes.matchedCount === 0) {
-              // Try to seed inventory if missing
-              const seeded = await seedInventoryIfMissing({ flightId, fareClass, session });
-              if (!seeded) {
-                throw fastify.httpErrors.conflict('Insufficient seats');
-              }
-              // Try decrement again (should succeed now)
-              invRes = await inventory.updateOne(
-                { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
-                { $inc: { seats_left: -1 } },
-                { session }
-              );
-              if (invRes.matchedCount === 0) {
-                throw fastify.httpErrors.conflict('Insufficient seats');
-              }
-            }
-            // Create booking
-            bookingDoc = {
-              userId,
-              flightId,
-              class: fareClass,
-              status: 'active',
-              createdAt: new Date(),
-              pnr: new ObjectId().toString()
-            };
-            await bookings.insertOne(bookingDoc, { session });
-          });
-        } catch (e) {
-          // If transaction fails with code 20, fallback to non-transactional
-          if (e && e.code === 20) {
-            transactionSupported = false;
-          } else {
-            throw e;
-          }
-        }
-      }
-      if (!transactionSupported) {
-        // Fallback: no transaction/session
-        // Decrement seat
-        let invRes = await inventory.updateOne(
-          { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
-          { $inc: { seats_left: -1 } }
-        );
-        if (invRes.matchedCount === 0) {
-          // Try to seed inventory if missing
-          const seeded = await seedInventoryIfMissing({ flightId, fareClass });
-          if (!seeded) {
-            const err = new Error('Insufficient seats');
-            err.statusCode = 409;
-            throw fastify.httpErrors?.conflict
-              ? fastify.httpErrors.conflict('Insufficient seats')
-              : err;
-          }
-          // Try decrement again (should succeed now)
-          invRes = await inventory.updateOne(
-            { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
-            { $inc: { seats_left: -1 } }
-          );
-          if (invRes.matchedCount === 0) {
-            const err = new Error('Insufficient seats');
-            err.statusCode = 409;
-            throw fastify.httpErrors?.conflict
-              ? fastify.httpErrors.conflict('Insufficient seats')
-              : err;
-          }
-        }
-        // Create booking
-        bookingDoc = {
-          userId,
-          flightId,
-          class: fareClass,
-          status: 'active',
-          createdAt: new Date(),
-          pnr: new ObjectId().toString()
-        };
-        await bookings.insertOne(bookingDoc);
-      }
-      await session.endSession();
-      return bookingDoc;
-    } catch (err) {
-      await session.endSession();
-      // Print error for debugging in test
-      if (process.env.NODE_ENV === 'test' || process.env.JEST_WORKER_ID) {
-        // eslint-disable-next-line no-console
-        console.error('Booking error (createBooking):', err);
-      }
-      if (attempt >= 3) throw err;
-    }
-  }
+  const bookingDoc = {
+    userId,
+    flightId,
+    class: fareClass,
+    status: 'active',
+    createdAt: new Date(),
+    pnr: new ObjectId().toString()
+  };
+  await bookings.insertOne(bookingDoc);
+  return bookingDoc;
 }
 
 /**
  * List bookings for a user.
  */
 export async function listBookings(fastify, userId, { status, page = 1, limit = 20 } = {}) {
-  const bookings = fastify.mongo.db.collection('bookings');
+  const bookings = fastify.mongo.db.collection('flight_bookings');
   const query = { userId };
   if (status) query.status = status;
   const skip = (page - 1) * limit;
@@ -163,90 +35,20 @@ export async function listBookings(fastify, userId, { status, page = 1, limit = 
  * Cancel a booking and restore seat.
  */
 export async function cancelBooking(fastify, userId, bookingId) {
-  const client = fastify.mongo.client;
   const db = fastify.mongo.db;
-  const bookings = db.collection('bookings');
-  const inventory = db.collection('inventory');
+  const bookings = db.collection('flight_bookings');
 
-  let attempt = 0;
-  let booking;
-  let transactionSupported = true;
-
-  while (attempt < 3) {
-    attempt++;
-    const session = client.startSession();
-    try {
-      // Detect if transactions are supported (mongodb-memory-server is standalone, not replica set)
-      if (attempt === 1) {
-        try {
-          await session.withTransaction(async () => {});
-        } catch (e) {
-          if (e && e.code === 20) {
-            transactionSupported = false;
-          } else {
-            throw e;
-          }
-        }
-      }
-
-      if (transactionSupported) {
-        try {
-          await session.withTransaction(async () => {
-            booking = await bookings.findOne({ _id: new ObjectId(bookingId), userId });
-            if (!booking || booking.status === 'cancelled') {
-              throw fastify.httpErrors.notFound('Booking not found or already cancelled');
-            }
-            await bookings.updateOne(
-              { _id: new ObjectId(bookingId) },
-              { $set: { status: 'cancelled' } },
-              { session }
-            );
-            await inventory.updateOne(
-              { flight_id: booking.flightId, class: booking.class },
-              { $inc: { seats_left: 1 } },
-              { session }
-            );
-          });
-        } catch (e) {
-          // If transaction fails with code 20, fallback to non-transactional
-          if (e && e.code === 20) {
-            transactionSupported = false;
-            await session.endSession();
-            continue; // retry with fallback
-          } else {
-            throw e;
-          }
-        }
-      }
-      if (!transactionSupported) {
-        // Fallback: no transaction/session
-        booking = await bookings.findOne({ _id: new ObjectId(bookingId), userId });
-        if (!booking || booking.status === 'cancelled') {
-          const err = new Error('Booking not found or already cancelled');
-          err.statusCode = 404;
-          throw fastify.httpErrors?.notFound
-            ? fastify.httpErrors.notFound('Booking not found or already cancelled')
-            : err;
-        }
-        await bookings.updateOne(
-          { _id: new ObjectId(bookingId) },
-          { $set: { status: 'cancelled' } }
-        );
-        await inventory.updateOne(
-          { flight_id: booking.flightId, class: booking.class },
-          { $inc: { seats_left: 1 } }
-        );
-      }
-      await session.endSession();
-      return { ...booking, status: 'cancelled' };
-    } catch (err) {
-      await session.endSession();
-      // Print error for debugging in test
-      if (process.env.NODE_ENV === 'test' || process.env.JEST_WORKER_ID) {
-        // eslint-disable-next-line no-console
-        console.error('Booking error (cancelBooking):', err);
-      }
-      if (attempt >= 3) throw err;
-    }
+  const booking = await bookings.findOne({ _id: new ObjectId(bookingId), userId });
+  if (!booking || booking.status === 'cancelled') {
+    const err = new Error('Booking not found or already cancelled');
+    err.statusCode = 404;
+    throw fastify.httpErrors?.notFound
+      ? fastify.httpErrors.notFound('Booking not found or already cancelled')
+      : err;
   }
+  await bookings.updateOne(
+    { _id: new ObjectId(bookingId) },
+    { $set: { status: 'cancelled' } }
+  );
+  return { ...booking, status: 'cancelled' };
 }
