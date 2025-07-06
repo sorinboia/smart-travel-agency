@@ -1,4 +1,5 @@
 import { ObjectId } from 'mongodb';
+import { findById as findFlightById } from './flightCatalogue.js';
 
 /**
  * Create a booking with seat decrement in a transaction.
@@ -8,6 +9,24 @@ export async function createBooking(fastify, userId, { flightId, class: fareClas
   const db = fastify.mongo.db;
   const bookings = db.collection('bookings');
   const inventory = db.collection('inventory');
+
+  // Helper: Seed inventory for a flight/class if missing, using catalogue
+  async function seedInventoryIfMissing({ flightId, fareClass, session }) {
+    const flight = findFlightById(flightId);
+    if (!flight) return false;
+    const classInfo = flight.class_fares.find(cf => cf.class === fareClass);
+    if (!classInfo || classInfo.seats_left <= 0) return false;
+    // Insert with seats_left - 1 (consume 1 for this booking)
+    await inventory.insertOne(
+      {
+        flight_id: flightId,
+        class: fareClass,
+        seats_left: classInfo.seats_left - 1
+      },
+      session ? { session } : undefined
+    );
+    return true;
+  }
 
   let bookingDoc;
   let attempt = 0;
@@ -33,13 +52,26 @@ export async function createBooking(fastify, userId, { flightId, class: fareClas
         try {
           await session.withTransaction(async () => {
             // Decrement seat
-            const invRes = await inventory.updateOne(
+            let invRes = await inventory.updateOne(
               { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
               { $inc: { seats_left: -1 } },
               { session }
             );
             if (invRes.matchedCount === 0) {
-              throw fastify.httpErrors.conflict('Insufficient seats');
+              // Try to seed inventory if missing
+              const seeded = await seedInventoryIfMissing({ flightId, fareClass, session });
+              if (!seeded) {
+                throw fastify.httpErrors.conflict('Insufficient seats');
+              }
+              // Try decrement again (should succeed now)
+              invRes = await inventory.updateOne(
+                { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
+                { $inc: { seats_left: -1 } },
+                { session }
+              );
+              if (invRes.matchedCount === 0) {
+                throw fastify.httpErrors.conflict('Insufficient seats');
+              }
             }
             // Create booking
             bookingDoc = {
@@ -64,17 +96,32 @@ export async function createBooking(fastify, userId, { flightId, class: fareClas
       if (!transactionSupported) {
         // Fallback: no transaction/session
         // Decrement seat
-        const invRes = await inventory.updateOne(
+        let invRes = await inventory.updateOne(
           { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
           { $inc: { seats_left: -1 } }
         );
         if (invRes.matchedCount === 0) {
-          // Fallback: if httpErrors is not available, throw plain error with code
-          const err = new Error('Insufficient seats');
-          err.statusCode = 409;
-          throw fastify.httpErrors?.conflict
-            ? fastify.httpErrors.conflict('Insufficient seats')
-            : err;
+          // Try to seed inventory if missing
+          const seeded = await seedInventoryIfMissing({ flightId, fareClass });
+          if (!seeded) {
+            const err = new Error('Insufficient seats');
+            err.statusCode = 409;
+            throw fastify.httpErrors?.conflict
+              ? fastify.httpErrors.conflict('Insufficient seats')
+              : err;
+          }
+          // Try decrement again (should succeed now)
+          invRes = await inventory.updateOne(
+            { flight_id: flightId, class: fareClass, seats_left: { $gt: 0 } },
+            { $inc: { seats_left: -1 } }
+          );
+          if (invRes.matchedCount === 0) {
+            const err = new Error('Insufficient seats');
+            err.statusCode = 409;
+            throw fastify.httpErrors?.conflict
+              ? fastify.httpErrors.conflict('Insufficient seats')
+              : err;
+          }
         }
         // Create booking
         bookingDoc = {

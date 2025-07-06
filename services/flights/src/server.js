@@ -5,6 +5,7 @@ import Fastify from 'fastify';
 import pino from 'pino';
 import jwtPlugin from '@fastify/jwt';
 import mongoPlugin from '@fastify/mongodb';
+import sensible from '@fastify/sensible';
 
 import jwtConfig from './plugins/jwt.js';
 import mongoConfig from './plugins/mongodb.js';
@@ -37,6 +38,7 @@ const fastify = Fastify({
 await fastify.register(mongoPlugin, mongoConfig);
 await fastify.register(minioPlugin);
 await fastify.register(jwtPlugin, jwtConfig);
+await fastify.register(sensible);
 await fastify.register(authenticatePlugin);
 
 // Load flights.json from MinIO after plugins are registered
