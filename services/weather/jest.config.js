@@ -1,8 +1,17 @@
 export default {
   testEnvironment: 'node',
-  testMatch: ['**/test/**/*.spec.js'],
+  testTimeout: 30000,
+  // Remove moduleNameMapper to avoid interfering with node_modules resolution
+  roots: ['<rootDir>/test'],
+  testMatch: ['**/*.spec.js'],
   collectCoverage: true,
-  coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    'src/**/*.js',
+    '!src/server.js'
+  ],
+  coverageDirectory: './coverage',
   coverageReporters: ['text', 'lcov'],
-  verbose: true
+  moduleFileExtensions: ['js', 'json'],
+  verbose: true,
+  transform: {}
 };

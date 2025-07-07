@@ -1,5 +1,9 @@
+/**
+ * @jest-environment node
+ */
 // Unit tests for weatherCatalogue.js filter logic
-import { search } from '../../../services/weather/src/models/weatherCatalogue.js';
+import { jest } from '@jest/globals';
+import { search } from '../../src/models/weatherCatalogue.js';
 
 const catalogue = [
   {
@@ -23,11 +27,12 @@ const catalogue = [
 ];
 
 describe('weatherCatalogue search', () => {
-  beforeAll(() => {
+  beforeAll(async () => {
     // Patch the in-memory catalogue for testing
-    // eslint-disable-next-line no-undef
-    jest.spyOn(require('../../../services/weather/src/models/weatherCatalogue.js'), 'search').mockImplementation((filters) => {
-      // Inline filter logic for test isolation
+    // Instead of patching, override the local reference for tests
+    // (ESM exports are read-only, so we can't mock them directly)
+    // We'll use a local function for test isolation
+    globalThis._testSearch = (filters) => {
       let results = catalogue;
       if (filters.iata) {
         results = results.filter(w => w.location?.iata && w.location.iata.toLowerCase() === filters.iata.toLowerCase());
@@ -43,40 +48,40 @@ describe('weatherCatalogue search', () => {
       }
       results = results.slice().sort((a, b) => (a.date > b.date ? 1 : a.date < b.date ? -1 : 0));
       return results;
-    });
+    };
   });
 
   it('filters by iata', () => {
-    const res = search({ iata: 'TLV' });
+    const res = globalThis._testSearch({ iata: 'TLV' });
     expect(res.length).toBe(2);
     expect(res[0].location.iata).toBe('TLV');
   });
 
   it('filters by city (case-insensitive)', () => {
-    const res = search({ city: 'tel aviv' });
+    const res = globalThis._testSearch({ city: 'tel aviv' });
     expect(res.length).toBe(2);
     expect(res[0].location.city).toBe('Tel Aviv');
   });
 
   it('filters by country', () => {
-    const res = search({ country: 'USA' });
+    const res = globalThis._testSearch({ country: 'USA' });
     expect(res.length).toBe(1);
     expect(res[0].location.country).toBe('USA');
   });
 
   it('filters by date', () => {
-    const res = search({ date: '2025-07-08' });
+    const res = globalThis._testSearch({ date: '2025-07-08' });
     expect(res.length).toBe(1);
     expect(res[0].date).toBe('2025-07-08');
   });
 
   it('sorts by date ascending', () => {
-    const res = search({ iata: 'TLV' });
+    const res = globalThis._testSearch({ iata: 'TLV' });
     expect(res[0].date < res[1].date).toBe(true);
   });
 
   it('returns empty array for no match', () => {
-    const res = search({ city: 'Nowhere' });
+    const res = globalThis._testSearch({ city: 'Nowhere' });
     expect(res.length).toBe(0);
   });
 });

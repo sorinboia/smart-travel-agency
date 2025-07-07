@@ -11,21 +11,20 @@ describe('Weather Service API', () => {
     // Register only the weather route for isolated testing
     await fastify.register(weatherRoutes);
     // Stub catalogue with fixture data
+    // Stub MinIO with callback-style getObject (matches util.promisify)
+    const { Readable } = await import('stream');
+    const fixture = JSON.stringify([
+      {
+        weather_id: 'w1',
+        location: { iata: 'TLV', city: 'Tel Aviv', country: 'Israel' },
+        date: '2025-07-07',
+        summary: 'Sunny'
+      }
+    ]);
     await loadCatalogue({
       minio: {
-        getObject: async () => {
-          // Return a stream of a small JSON array for testing
-          const { Readable } = await import('stream');
-          const data = JSON.stringify([
-            {
-              weather_id: 'w1',
-              location: { iata: 'TLV', city: 'Tel Aviv', country: 'Israel' },
-              date: '2025-07-07',
-              summary: 'Sunny'
-            }
-          ]);
-          return Readable.from([data]);
-        }
+        // (bucket, objectName, cb) –> cb(null, stream)
+        getObject: (_bucket, _object, cb) => cb(null, Readable.from([fixture]))
       }
     });
   });
