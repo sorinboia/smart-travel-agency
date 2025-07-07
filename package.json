@@ -1,0 +1,13 @@
+{
+  "name": "smart-travel-agency-monorepo",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ],
+  "scripts": {
+    "start": "concurrently -k -p \"[{name}]\" -c \"blue,green,magenta,cyan,yellow\" \"npm run start --workspace services/authentication\" \"npm run start --workspace services/flights\" \"npm run start --workspace services/hotels\" \"npm run start --workspace services/trips\" \"npm run start --workspace services/weather\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

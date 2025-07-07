@@ -1,3 +1,17 @@
+## Running every micro-service
+
+To install all dependencies and start all services in parallel:
+
+```sh
+npm install   # installs all service dependencies and root tools
+npm start     # launches all five microservices in parallel
+```
+
+Each service will print logs with a colored prefix. To stop all, press Ctrl+C.
+
+Environment variables and .env files are still managed per service in their respective folders.
+
+---
 # Smart Travel Agency
 
 > Conversational travel-booking demo showcasing Google A2A agent patterns, domain micro-services and FastMCP façades.
