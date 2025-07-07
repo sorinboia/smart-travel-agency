@@ -3,13 +3,10 @@ import 'dotenv/config';
 
 import Fastify from 'fastify';
 import pino from 'pino';
-import jwtPlugin from '@fastify/jwt';
 import sensible from '@fastify/sensible';
 import swagger from '@fastify/swagger';
 
-import jwtConfig from './plugins/jwt.js';
 import minioPlugin from './plugins/minio.js';
-import authenticatePlugin from './plugins/authenticate.js';
 
 import { loadCatalogue } from './models/weatherCatalogue.js';
 import weatherRoutes from './routes/index.js';
@@ -24,8 +21,6 @@ const fastify = Fastify({
 // Register plugins
 await fastify.register(sensible);
 await fastify.register(minioPlugin);
-await fastify.register(jwtPlugin, jwtConfig);
-await fastify.register(authenticatePlugin);
 await fastify.register(swagger, {
   openapi: {
     info: {
