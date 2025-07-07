@@ -1,7 +1,7 @@
 import { findById } from '../models/flightCatalogue.js';
 
 export default async function detailsRoutes(fastify, opts) {
-  fastify.get('/flights/:flightId', async (req, reply) => {
+  fastify.get('/flights/:flightId', { preHandler: fastify.authenticate }, async (req, reply) => {
     const { flightId } = req.params;
     const flight = findById(flightId);
     if (!flight) {

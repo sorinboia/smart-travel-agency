@@ -8,6 +8,8 @@ describe('Hotels Service API', () => {
 
   it('should allow booking a hotel room', async () => {
     // TODO: Implement e2e test for POST /bookings
+  });
+
   it('should allow booking the same hotel/roomType repeatedly (no availability check)', async () => {
     // This is a placeholder for a real test. Pseudocode:
     // 1. Book the same hotel/roomType twice with different users or same user.
@@ -24,7 +26,6 @@ describe('Hotels Service API', () => {
     //   .send({ hotelId: 'demo-hotel', roomType: 'standard', checkIn: '2025-07-10', checkOut: '2025-07-12' })
     //   .set('Authorization', `Bearer ${token}`);
     // expect(res2.status).toBe(200);
-  });
   });
 
   it('should list user hotel bookings', async () => {

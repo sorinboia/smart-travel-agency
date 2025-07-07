@@ -1,7 +1,7 @@
 import { listBookings } from '../models/booking.js';
 
 export default async function listBookingsRoutes(fastify, opts) {
-  fastify.get('/bookings', async (req, reply) => {
+  fastify.get('/bookings', { preHandler: fastify.authenticate }, async (req, reply) => {
     const userId = req.user?.sub || req.user?.id;
     const { status, page, limit } = req.query;
     const bookings = await listBookings(fastify, userId, {

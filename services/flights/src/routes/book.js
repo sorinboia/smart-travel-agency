@@ -1,7 +1,7 @@
 import { createBooking } from '../models/booking.js';
 
 export default async function bookRoutes(fastify, opts) {
-  fastify.post('/bookings', async (req, reply) => {
+  fastify.post('/bookings', { preHandler: fastify.authenticate }, async (req, reply) => {
     const userId = req.user?.sub || req.user?.id;
     const { flightId, class: fareClass } = req.body;
     if (!flightId || !fareClass) {

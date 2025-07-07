@@ -1,4 +1,4 @@
-// End-to-end API tests for STA Flights Service (ESM version)
+/* End-to-end API tests for STA Flights Service (ESM version) */
 
 import Fastify from 'fastify';
 import jwtPlugin from '@fastify/jwt';
@@ -16,12 +16,13 @@ import supertest from 'supertest';
 import fs from 'fs/promises';
 import path from 'path';
 import fp from 'fastify-plugin';
+import { __setTestFlights__ } from '../src/models/flightCatalogue.js';
 
 // Mock authenticatePlugin
 const authenticatePlugin = fp(async (fastify) => {
-  fastify.addHook('onRequest', async (req, reply) => {
+  fastify.decorate('authenticate', async function (req, reply) {
     try {
-      await req.jwtVerify();
+      req.user = await req.jwtVerify();
     } catch (err) {
       reply.code(401).send({ error: 'Unauthorized' });
     }
@@ -43,7 +44,9 @@ const minioMockPlugin = fp(async (fastify) => {
 let fastify, mongod, uri, jwtToken;
 
 beforeAll(async () => {
-  mongod = await MongoMemoryServer.create();
+  mongod = await MongoMemoryServer.create({
+    instance: { port: 27018, ip: '127.0.0.1', storageEngine: 'ephemeralForTest' }
+  });
   uri = mongod.getUri();
   fastify = Fastify();
   await fastify.register(mongoPlugin, { ...mongoConfig, url: uri });
@@ -55,6 +58,20 @@ beforeAll(async () => {
   await fastify.register(bookRoutes);
   await fastify.register(listBookingsRoutes);
   await fastify.register(cancelRoutes);
+// Patch in-memory flights for test fallback
+__setTestFlights__([
+  {
+    flight_id: 'flight-1',
+    origin: { iata: 'TLV' },
+    destination: { iata: 'JFK' },
+    departure_utc: '2025-07-10T08:00:00Z',
+    duration_min: 600,
+    class_fares: [
+      { class: 'Economy', seats_left: 2, price: { amount: 500 } },
+      { class: 'Business', seats_left: 0, price: { amount: 1200 } }
+    ]
+  }
+]);
 
   // Generate JWT
   jwtToken = fastify.jwt.sign({ sub: 'user1', email: 'user1@example.com' });
