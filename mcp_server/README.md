@@ -4,7 +4,7 @@ A FastMCP-based server for merging and serving multiple OpenAPI specifications, 
 
 ### Example command
 ```
-python mcp_server/mcp.py -f mcp_server/openapi/weather.yaml --port 40123 --base-url http://localhost:4006
+python mcp_server/mcp_start.py -p mcp_server/openapi/weather.yaml --port 40123 --base-url http://localhost:4006
 ```
 
 

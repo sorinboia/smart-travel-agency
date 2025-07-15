@@ -1,12 +1,12 @@
 import requests
 import json
+import yaml
 import asyncio
 import httpx
 from fastmcp import FastMCP
 import uvicorn
 import logging
 import argparse
-# from pathlib import Path
 import sys
 import glob
 import re
@@ -180,7 +180,18 @@ def main():
     for path in spec_paths:
         try:
             with open(path, "r", encoding="utf-8") as f:
-                spec = json.load(f)
+                if path.lower().endswith((".yaml", ".yml")):
+                    try:
+                        spec = yaml.safe_load(f)
+                    except Exception as e:
+                        logger.error(f"Failed to parse YAML spec '{path}': {e}")
+                        raise
+                else:
+                    try:
+                        spec = json.load(f)
+                    except Exception as e:
+                        logger.error(f"Failed to parse JSON spec '{path}': {e}")
+                        raise
                 specs.append(spec)
                 logger.info(f"Loaded spec: {path} ({len(spec.get('paths', {}))} paths)")
         except Exception as e:

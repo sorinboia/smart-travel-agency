@@ -1,7 +1,8 @@
 # Ignore all node_modules directories at any depth
 node_modules/
 **/node_modules/
-
+__pycache__/
+**/__pycache__/
 # Ignore environment files
 .env
 .env.*
