@@ -1,0 +1,229 @@
+openapi: 3.1.0
+info:
+  title: Authentication Service API
+  version: 1.0.0
+  description: |
+    The Authentication Service provides secure user registration, login, JWT issuance/verification, and profile retrieval for the travel agency platform. It is designed for use by other microservices and client applications.
+    
+    - Passwords are hashed using bcrypt before storage.
+    - JWT tokens are issued for authentication and are valid for 1 year.
+    - Duplicate email registration is prevented.
+    - All endpoints return clear error messages for invalid input or authentication failures.
+
+servers:
+  - url: http://auth-service:4003
+    description: In-cluster service endpoint
+
+tags:
+  - name: Auth
+    description: User authentication and profile management
+  - name: Health
+    description: Service health check
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique user identifier (MongoDB ObjectId)
+          example: "64a1f2c3e4b5d6f7a8b9c0d1"
+        email:
+          type: string
+          format: email
+          example: "user@example.com"
+        fullName:
+          type: string
+          example: "Jane Doe"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2025-07-07T12:34:56.789Z"
+        status:
+          type: string
+          enum: [active, disabled]
+          example: "active"
+    RegisterRequest:
+      type: object
+      required: [email, password, fullName]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+        fullName:
+          type: string
+    RegisterResponse:
+      type: object
+      properties:
+        user:
+          $ref: '#/components/schemas/User'
+        token:
+          type: string
+          description: JWT access token
+        expiresAt:
+          type: string
+          format: date-time
+          description: Token expiration timestamp
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+    LoginResponse:
+      type: object
+      properties:
+        token:
+          type: string
+          description: JWT access token
+        expiresAt:
+          type: string
+          format: date-time
+          description: Token expiration timestamp
+    MeResponse:
+      type: object
+      properties:
+        user:
+          $ref: '#/components/schemas/User'
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Invalid email or password"
+    HealthzResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "ok"
+        uptime:
+          type: number
+          example: 123.45
+        mongo:
+          type: string
+          example: "reachable"
+
+paths:
+  /auth/register:
+    post:
+      tags: [Auth]
+      summary: Register a new user account
+      description: |
+        Registers a new user. Validates that the email is unique, hashes the password using bcrypt, stores the user in MongoDB, and issues a JWT token valid for 1 year.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+            examples:
+              valid:
+                value:
+                  email: "newuser@example.com"
+                  password: "StrongPassword123"
+                  fullName: "New User"
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegisterResponse'
+        '409':
+          description: Email already registered
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                duplicate:
+                  value:
+                    error: "Email already registered"
+
+  /auth/login:
+    post:
+      tags: [Auth]
+      summary: Authenticate user and issue JWT
+      description: |
+        Authenticates a user with email and password. If credentials are valid, issues a JWT token valid for 1 year.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            examples:
+              valid:
+                value:
+                  email: "user@example.com"
+                  password: "StrongPassword123"
+      responses:
+        '200':
+          description: Login successful, JWT issued
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+        '401':
+          description: Invalid email or password
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                invalid:
+                  value:
+                    error: "Invalid email or password"
+
+  /auth/me:
+    get:
+      tags: [Auth]
+      summary: Get current user profile
+      description: |
+        Returns the profile of the currently authenticated user. Requires a valid JWT in the Authorization header.
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Current user profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeResponse'
+        '401':
+          description: Unauthorized or user not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                notfound:
+                  value:
+                    error: "User not found"
+
+  /healthz:
+    get:
+      tags: [Health]
+      summary: Health check endpoint
+      description: Returns service status, uptime, and MongoDB connectivity.
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthzResponse'

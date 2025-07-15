@@ -31,7 +31,7 @@ class LoggingAsyncClient(httpx.AsyncClient):
                 body = str(kwargs["content"])
             else:
                 body = None
-            logging.info(f"-------------------> HTTP POST to {url} with body: {body}")
+
         return await super().request(method, url, *args, **kwargs)
 
 

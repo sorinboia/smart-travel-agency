@@ -1,0 +1,377 @@
+openapi: 3.1.0
+info:
+  title: Hotels Service API
+  version: 1.0.0
+  description: |
+    The Hotels Service provides hotel catalogue search, hotel details, and user hotel booking management for the travel agency platform.
+
+    - The hotel catalogue is loaded from a MinIO bucket ("hotels.json") at service startup and kept in memory for fast search and lookup.
+    - Bookings are stored in MongoDB. No room availability checks are performed (all booking requests are accepted for demo purposes).
+    - All endpoints return clear error messages for invalid input or authentication failures.
+    - JWT authentication is required for all booking-related endpoints.
+
+    **Endpoints:**
+      - Search and filter hotels by city, country, amenities, and more.
+      - Retrieve detailed information for a specific hotel.
+      - Create, list, and cancel hotel bookings for the authenticated user.
+
+servers:
+  - url: http://hotels-service:4001
+    description: In-cluster service endpoint
+
+tags:
+  - name: Hotels
+    description: Hotel catalogue search and hotel details
+  - name: Bookings
+    description: Create, list, and cancel hotel bookings
+  - name: Health
+    description: Service health check
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Hotel:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique hotel identifier
+          example: "hotel_123"
+        name:
+          type: string
+          example: "Grand Plaza"
+        address:
+          type: object
+          properties:
+            city:
+              type: string
+              example: "Paris"
+            country:
+              type: string
+              example: "France"
+            street:
+              type: string
+              example: "123 Main St"
+            postalCode:
+              type: string
+              example: "75001"
+        amenities:
+          type: array
+          items:
+            type: string
+          example: ["wifi", "pool", "gym"]
+        maxGuests:
+          type: integer
+          example: 4
+        pricePerNight:
+          type: number
+          format: float
+          example: 120.5
+        description:
+          type: string
+          example: "A luxury hotel in the heart of Paris."
+    Booking:
+      type: object
+      properties:
+        id:
+          type: string
+          description: MongoDB ObjectId
+          example: "64a1f2c3e4b5d6f7a8b9c0d1"
+        bookingRef:
+          type: string
+          description: Unique booking reference
+          example: "bkg_abc123"
+        hotelId:
+          type: string
+          example: "hotel_123"
+        userId:
+          type: string
+          example: "user_456"
+        roomType:
+          type: string
+          example: "double"
+        checkIn:
+          type: string
+          format: date
+          example: "2025-08-01"
+        checkOut:
+          type: string
+          format: date
+          example: "2025-08-05"
+        status:
+          type: string
+          enum: [active, cancelled]
+          example: "active"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2025-07-07T12:34:56.789Z"
+    CreateBookingRequest:
+      type: object
+      required: [hotelId, roomType, checkIn, checkOut]
+      properties:
+        hotelId:
+          type: string
+          example: "hotel_123"
+        roomType:
+          type: string
+          example: "double"
+        checkIn:
+          type: string
+          format: date
+          example: "2025-08-01"
+        checkOut:
+          type: string
+          format: date
+          example: "2025-08-05"
+    ListBookingsResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Booking'
+    CancelBookingResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Hotel not found"
+    HealthzResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "ok"
+        uptime:
+          type: number
+          example: 123.45
+
+paths:
+  /hotels:
+    get:
+      tags: [Hotels]
+      summary: Search hotels
+      description: |
+        Returns a list of hotels matching the provided filters.
+        The catalogue is loaded from MinIO at startup and kept in memory.
+      parameters:
+        - in: query
+          name: city
+          schema:
+            type: string
+          description: Filter by city
+        - in: query
+          name: country
+          schema:
+            type: string
+          description: Filter by country
+        - in: query
+          name: guests
+          schema:
+            type: integer
+          description: Minimum number of guests
+        - in: query
+          name: amenities
+          schema:
+            type: array
+            items:
+              type: string
+          style: form
+          explode: true
+          description: Required amenities (repeatable or comma-separated)
+      responses:
+        '200':
+          description: List of hotels matching filters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Hotel'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /hotels/{hotelId}:
+    get:
+      tags: [Hotels]
+      summary: Get hotel details
+      description: Returns detailed information for a specific hotel.
+      parameters:
+        - in: path
+          name: hotelId
+          required: true
+          schema:
+            type: string
+          description: Unique hotel identifier
+      responses:
+        '200':
+          description: Hotel details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Hotel'
+        '404':
+          description: Hotel not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /bookings:
+    post:
+      tags: [Bookings]
+      summary: Create a hotel booking
+      description: |
+        Creates a new hotel booking for the authenticated user.
+        No room availability checks are performed; all requests are accepted.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingRequest'
+      responses:
+        '200':
+          description: Booking created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Booking'
+        '401':
+          description: Unauthorized (missing or invalid JWT)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    get:
+      tags: [Bookings]
+      summary: List user hotel bookings
+      description: Returns a paginated list of hotel bookings for the authenticated user.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+            enum: [active, cancelled]
+          description: Filter by booking status
+        - in: query
+          name: page
+          schema:
+            type: integer
+            default: 1
+          description: Page number (default 1)
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+          description: Results per page (default 20, max 100)
+      responses:
+        '200':
+          description: List of bookings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListBookingsResponse'
+        '401':
+          description: Unauthorized (missing or invalid JWT)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /bookings/{id}/cancel:
+    post:
+      tags: [Bookings]
+      summary: Cancel a hotel booking
+      description: |
+        Cancels a hotel booking for the authenticated user.
+        If the booking is already cancelled or not found, a 404 error is returned.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Booking identifier (MongoDB ObjectId)
+      responses:
+        '200':
+          description: Booking cancelled successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CancelBookingResponse'
+        '401':
+          description: Unauthorized (missing or invalid JWT)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Booking not found or already cancelled
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /healthz:
+    get:
+      tags: [Health]
+      summary: Health check endpoint
+      description: Returns service status and uptime.
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthzResponse'
