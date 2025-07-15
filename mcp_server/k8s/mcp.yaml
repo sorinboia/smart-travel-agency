@@ -1,0 +1,97 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mcp-openapi-specs
+  namespace: smart-travel-agency
+data:
+  # Example OpenAPI spec files (YAML or JSON). Add your real specs here.
+  authentication.yaml: |
+    # Example: Place your OpenAPI YAML here
+    openapi: 3.0.0
+    info:
+      title: Authentication API
+      version: 1.0.0
+    paths: {}
+  flights.yaml: |
+    openapi: 3.0.0
+    info:
+      title: Flights API
+      version: 1.0.0
+    paths: {}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sta-mcp-server
+  namespace: smart-travel-agency
+  labels:
+    app: sta-mcp-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sta-mcp-server
+  template:
+    metadata:
+      labels:
+        app: sta-mcp-server
+    spec:
+      containers:
+        - name: sta-mcp-server
+          image: sta-mcp-server:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9000
+          env:
+            - name: MCP_PORT
+              value: "9000"
+            # Optionally set MCP_BASE_URL and MCP_HEADERS here
+            # - name: MCP_BASE_URL
+            #   value: "http://example-upstream"
+            # - name: MCP_HEADERS
+            #   value: "Authorization=Bearer123;X-API-Key=foo"
+          volumeMounts:
+            - name: openapi-specs
+              mountPath: /specs
+              readOnly: true
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 9000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 9000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+      volumes:
+        - name: openapi-specs
+          configMap:
+            name: mcp-openapi-specs
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sta-mcp-server
+  namespace: smart-travel-agency
+  labels:
+    app: sta-mcp-server
+spec:
+  type: ClusterIP
+  selector:
+    app: sta-mcp-server
+  ports:
+    - protocol: TCP
+      port: 9000
+      targetPort: 9000

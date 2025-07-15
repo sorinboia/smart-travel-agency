@@ -11,7 +11,7 @@ import sys
 import glob
 import re
 import os
-from trim_openapi import trim_openapi_spec
+
 
 
 
@@ -120,12 +120,20 @@ def merge_openapi_specs(specs):
     return merged
 
 def main():
-    parser = argparse.ArgumentParser(description="Start MCP with merged OpenAPI specs")
+    parser = argparse.ArgumentParser(
+        description="Start MCP with merged OpenAPI specs.\n"
+                    "Supports merging multiple OpenAPI specs and proxying requests to a configurable upstream REST API.\n"
+                    "New options:\n"
+                    "  --base-url   Set the upstream REST base URL for all proxied requests (overrides default or $F5_BASE_URL)\n"
+                    "  --header     Add extra HTTP header(s) in KEY=VALUE form; repeatable. Example: --header X-API-Key=foo --header Authorization=Bearer123\n"
+    )
     parser.add_argument("specs", nargs="*", help="Paths to OpenAPI spec JSON files (explicit paths)")
     parser.add_argument("--pattern", "-p", action="append", help="Glob pattern(s) to include spec files (e.g. 'OpenApiSpecs/*.json')")
     parser.add_argument("-f", "--file-list", help="Path to text file whose entries (newline or comma-separated) are spec paths or patterns")
     # REMOVED: parser.add_argument("-o", "--output", ...)
     parser.add_argument("--port", type=int, default=9000, help="Port for FastMCP server to listen on (default: 9000)")
+    parser.add_argument("--base-url", help="Upstream REST base URL for all proxied requests (overrides default or $F5_BASE_URL)")
+    parser.add_argument("--header", action="append", help="Extra HTTP header(s) in KEY=VALUE form; repeatable. Example: --header X-API-Key=foo --header Authorization=Bearer123")
     args = parser.parse_args()
 
     # Helper to parse file-list (newline or comma separated)
@@ -183,7 +191,7 @@ def main():
         logger.error("No valid OpenAPI specs loaded. Exiting.")
         sys.exit(1)
 
-    merged_spec = trim_openapi_spec(merge_openapi_specs(specs))
+    merged_spec = merge_openapi_specs(specs)
 
     logger.info("Merged %d OpenAPI specs in-memory", len(specs))
     logger.info("Creating FastMCP server from merged OpenAPI spec")
@@ -194,9 +202,24 @@ def main():
         instructions="MCP server for F5 Distributed Cloud (multi-spec merged)"        
     )
 
+    # Build headers from --header, fallback to env, then default
+    headers = {}
+    if args.header:
+        for h in args.header:
+            if "=" not in h:
+                logger.error(f"Invalid --header '{h}'. Use KEY=VALUE.")
+                sys.exit(1)
+            k, v = h.split("=", 1)
+            headers[k.strip()] = v.strip()
+    # Default Authorization token from env if present and not already set
+    token = os.getenv("F5_TOKEN")
+    if token and "Authorization" not in headers:
+        headers["Authorization"] = f"APIToken {token}"
+    # Use base_url from CLI, then env, then default
+    base_url = args.base_url or os.getenv("F5_BASE_URL")
     http_client = LoggingAsyncClient(
-        base_url="https://f5-emea-workshop.console.ves.volterra.io",
-        headers={"Authorization": "APIToken TJ1+yNNGYt3QGJtCqw6a2lXK6ho="}
+        base_url=base_url,
+        headers=headers
     )
     fastmcp_api = FastMCP.from_openapi(
         openapi_spec=merged_spec,
