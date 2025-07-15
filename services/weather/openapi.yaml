@@ -1,0 +1,266 @@
+openapi: 3.1.0
+info:
+  title: Weather Service API
+  version: 1.0.0
+  description: |
+    The Weather Service provides read-only weather snapshot retrieval for the Smart Travel Agency platform.
+    - All data is sourced from an immutable MinIO object (`weather.json`), loaded at startup.
+    - The service exposes a single `/weather` endpoint for searching and filtering weather data by location and date.
+    - No authentication is required; the API is public and strictly read-only.
+    - Observability endpoints (`/metrics`, `/healthz`) are provided for monitoring and health checks.
+    - All errors are returned in a consistent envelope format.
+    - This contract is discoverable by the FastMCP façade and other platform agents.
+
+    **Endpoints:**
+      - GET `/weather`: Retrieve weather snapshots, filterable by IATA code, city, country, and date.
+      - GET `/healthz`: Service health and MinIO reachability.
+      - GET `/metrics`: Prometheus metrics for observability.
+
+    **Data Model:**
+      - Each weather snapshot includes location (IATA, city, country, lat/lon), date, summary, temperature, precipitation, humidity, wind, UV index, and icon.
+
+    **Error Handling:**
+      - 400: Invalid or missing parameters.
+      - 404: No weather data found for the given filters.
+      - 500: Internal server error or MinIO unreachable.
+
+    See [design/weather.md](../../design/weather.md) for full design details.
+
+servers:
+  - url: http://weather-service:4000
+    description: In-cluster service endpoint
+
+tags:
+  - name: Weather
+    description: Weather snapshot search and retrieval
+  - name: Health
+    description: Service health and MinIO reachability
+  - name: Observability
+    description: Prometheus metrics endpoint
+
+paths:
+  /weather:
+    get:
+      tags: [Weather]
+      summary: Get weather snapshot(s)
+      description: |
+        Returns a list of weather snapshots matching the provided filters.
+        All parameters are optional; if none are provided, all available weather data is returned.
+        Results are sorted by date ascending.
+      parameters:
+        - name: iata
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter by IATA airport code (case-insensitive)
+        - name: city
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter by city name (case-insensitive)
+        - name: country
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter by country name (case-insensitive)
+        - name: date
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date
+          description: Filter by ISO-8601 date (YYYY-MM-DD)
+      responses:
+        '200':
+          description: List of weather snapshots matching filters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeatherList'
+        '400':
+          description: Invalid or missing parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: No weather data found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /healthz:
+    get:
+      tags: [Health]
+      summary: Health check endpoint
+      description: Returns service status, uptime, and MinIO reachability.
+      responses:
+        '200':
+          description: Service is healthy and MinIO is reachable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthzResponse'
+        '500':
+          description: Service error or MinIO unreachable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthzResponse'
+
+  /metrics:
+    get:
+      tags: [Observability]
+      summary: Prometheus metrics endpoint
+      description: Exposes service and process metrics in Prometheus exposition format.
+      responses:
+        '200':
+          description: Prometheus metrics
+          content:
+            text/plain; version=0.0.4:
+              schema:
+                type: string
+
+components:
+  schemas:
+    Weather:
+      type: object
+      properties:
+        weather_id:
+          type: string
+          format: uuid
+          description: Unique weather snapshot identifier
+        location:
+          type: object
+          properties:
+            iata:
+              type: string
+              description: IATA airport code
+            city:
+              type: string
+              description: City name
+            country:
+              type: string
+              description: Country name
+            lat:
+              type: number
+              description: Latitude
+            lon:
+              type: number
+              description: Longitude
+        date:
+          type: string
+          format: date
+          description: Date of weather snapshot (YYYY-MM-DD)
+        summary:
+          type: string
+          description: Weather summary (e.g. "Sunny", "Cloudy")
+        temp_max_c:
+          type: number
+          description: Maximum temperature (°C)
+        temp_min_c:
+          type: number
+          description: Minimum temperature (°C)
+        precip_mm:
+          type: number
+          description: Precipitation (mm)
+        precip_prob:
+          type: number
+          description: Precipitation probability (%)
+        humidity_pct:
+          type: number
+          description: Humidity (%)
+        wind_kph:
+          type: number
+          description: Wind speed (kph)
+        uvi:
+          type: number
+          description: UV index
+        icon:
+          type: string
+          description: Icon descriptor
+      required:
+        - weather_id
+        - location
+        - date
+        - summary
+        - temp_max_c
+        - temp_min_c
+        - precip_mm
+        - precip_prob
+        - humidity_pct
+        - wind_kph
+        - uvi
+        - icon
+
+    WeatherList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Weather'
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+        details:
+          type: array
+          items:
+            type: string
+          description: Optional error details
+      required: [error]
+
+    HealthzResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [ok, error]
+          description: Service status
+        uptime:
+          type: number
+          description: Service uptime in seconds
+        minio:
+          type: string
+          enum: [reachable, unreachable]
+          description: MinIO reachability
+        error:
+          type: string
+          description: Error message if status is error
+
+  responses:
+    NotFound:
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    BadRequest:
+      description: Invalid or missing parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    InternalError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+security: []
+
+externalDocs:
+  description: Full design and data model
+  url: ../../design/weather.md

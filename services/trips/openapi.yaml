@@ -1,0 +1,331 @@
+openapi: 3.1.0
+info:
+  title: Trip Service API
+  version: 1.0.0
+  description: |
+    The Trip Service provides secure itinerary storage for the Smart Travel Agency platform.
+    - Each "trip plan" aggregates multiple flight and hotel booking references under a single document.
+    - No inventory or cross-domain validation is performed; the service simply stores and retrieves references.
+    - All trip operations require JWT authentication.
+    - Observability endpoints (`/metrics`, `/healthz`) are public for monitoring and health checks.
+    - All errors are returned in a consistent envelope format.
+    - See [design/trips.md](../../design/trips.md) for full design details.
+
+    **Endpoints:**
+      - GET `/trips`: List all trip plans for the authenticated user (paginated).
+      - POST `/trips`: Create a new trip plan.
+      - GET `/trips/{tripId}`: Retrieve details of a specific trip plan (only if owned by user).
+      - DELETE `/trips/{tripId}`: Soft-delete a trip plan (mark as deleted, not removed).
+      - GET `/healthz`: Service health and MongoDB reachability.
+      - GET `/metrics`: Prometheus metrics for observability.
+
+    **Data Model:**
+      - Each trip plan includes: unique ID, userId, name, flightBookingIds[], hotelBookingIds[], createdAt, updatedAt, status.
+
+    **Error Handling:**
+      - 400: Validation failure.
+      - 401: Missing or invalid JWT.
+      - 404: Trip not found or not owned by user.
+      - 500: Internal server error.
+
+servers:
+  - url: http://trip-service:4003
+    description: In-cluster service endpoint
+
+tags:
+  - name: Trips
+    description: Trip plan CRUD operations
+  - name: Health
+    description: Service health and MongoDB reachability
+  - name: Observability
+    description: Prometheus metrics endpoint
+
+paths:
+  /trips:
+    get:
+      tags: [Trips]
+      summary: List trip plans for the authenticated user
+      description: |
+        Returns a paginated list of all trip plans owned by the authenticated user.
+        Results are sorted by creation date descending. Soft-deleted trips are excluded.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+          description: Page number (default: 1)
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+          description: Maximum number of results per page (default: 20, max: 100)
+      responses:
+        '200':
+          description: List of trip plans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TripList'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    post:
+      tags: [Trips]
+      summary: Create a new trip plan
+      description: |
+        Creates a new trip plan for the authenticated user. The request body must include at least one booking reference.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TripCreateRequest'
+      responses:
+        '201':
+          description: Trip plan created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trip'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /trips/{tripId}:
+    get:
+      tags: [Trips]
+      summary: Get trip plan details
+      description: |
+        Retrieves the details of a specific trip plan, if it exists and is owned by the authenticated user.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: tripId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Unique identifier of the trip plan
+      responses:
+        '200':
+          description: Trip plan details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trip'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    delete:
+      tags: [Trips]
+      summary: Delete a trip plan (soft delete)
+      description: |
+        Soft-deletes a trip plan by marking its status as "deleted". Only the owner can delete their trip plans.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: tripId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Unique identifier of the trip plan
+      responses:
+        '204':
+          description: Trip plan deleted (no content)
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /healthz:
+    get:
+      tags: [Health]
+      summary: Health check endpoint
+      description: Returns service status, uptime, and MongoDB reachability.
+      responses:
+        '200':
+          description: Service is healthy and MongoDB is reachable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthzResponse'
+        '500':
+          description: Service error or MongoDB unreachable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthzResponse'
+
+  /metrics:
+    get:
+      tags: [Observability]
+      summary: Prometheus metrics endpoint
+      description: Exposes service and process metrics in Prometheus exposition format.
+      responses:
+        '200':
+          description: Prometheus metrics
+          content:
+            text/plain; version=0.0.4:
+              schema:
+                type: string
+
+components:
+  schemas:
+    Trip:
+      type: object
+      description: A trip plan document aggregating booking references for a user.
+      properties:
+        _id:
+          type: string
+          format: uuid
+          description: Unique trip plan identifier
+        userId:
+          type: string
+          format: uuid
+          description: User ID (from JWT subject)
+        name:
+          type: string
+          description: Optional label for the trip plan
+        flightBookingIds:
+          type: array
+          items:
+            type: string
+          description: Array of Flight booking document IDs
+        hotelBookingIds:
+          type: array
+          items:
+            type: string
+          description: Array of Hotel booking document IDs
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp (ISO-8601)
+        updatedAt:
+          type: string
+          format: date-time
+          description: Last update timestamp (ISO-8601)
+        status:
+          type: string
+          enum: [active, deleted]
+          description: Trip plan status
+      required: [_id, userId, flightBookingIds, hotelBookingIds, createdAt, updatedAt, status]
+
+    TripCreateRequest:
+      type: object
+      description: Request body for creating a new trip plan.
+      properties:
+        name:
+          type: string
+          description: Optional label for the trip plan
+        flightBookingIds:
+          type: array
+          items:
+            type: string
+          description: Array of Flight booking document IDs
+        hotelBookingIds:
+          type: array
+          items:
+            type: string
+          description: Array of Hotel booking document IDs
+      required: [flightBookingIds, hotelBookingIds]
+
+    TripList:
+      type: array
+      description: List of trip plans
+      items:
+        $ref: '#/components/schemas/Trip'
+
+    ErrorResponse:
+      type: object
+      description: Error envelope for all error responses.
+      properties:
+        error:
+          type: string
+          description: Error message
+        details:
+          type: array
+          items:
+            type: string
+          description: Optional error details
+      required: [error]
+
+    HealthzResponse:
+      type: object
+      description: Health check response
+      properties:
+        status:
+          type: string
+          enum: [ok, error]
+          description: Service status
+        uptime:
+          type: number
+          description: Service uptime in seconds
+        mongo:
+          type: string
+          enum: [reachable, unreachable]
+          description: MongoDB reachability
+        error:
+          type: string
+          description: Error message if status is error
+
+  responses:
+    NotFound:
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    BadRequest:
+      description: Invalid or missing parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Unauthorized:
+      description: Authentication required or invalid JWT
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    InternalError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
+externalDocs:
+  description: Full design and data model
+  url: ../../design/trips.md
